@@ -1,0 +1,10 @@
+= render "shared/header"
+.top
+  %p New Post
+  %span ✳︎詳細をみたい写真をクリック！
+.all-posts
+  .each-item
+    = render "shared/each"
+
+= paginate @posts
+= render "shared/footer"

@@ -1,0 +1,30 @@
+= render "shared/header"
+
+.message
+  %p ※只今準備中です。しばらくお待ちください！※
+
+-#   -# %p ✳︎お問い合わせフォーム✳︎
+-#   = form_for(@message) do |m|
+-#     %table.message-body
+-#       %tr.message-body__title
+-#         %th
+-#         %td 
+-#           %p ✳︎お問い合わせフォーム✳︎
+-#       %tr.message-body__email
+-#         %th
+-#           = m.label :メールアドレス
+-#         %br
+-#         %td
+-#           = m.text_field :email
+-#       %tr.message-body__detail
+-#         %th
+-#           = m.label :お問い合わせ内容
+-#         %br
+-#         %td
+-#           = m.text_area :content
+-#       %tr.message-submit
+-#         %th
+-#         %td
+-#           = m.submit "Send"
+
+= render "shared/footer"

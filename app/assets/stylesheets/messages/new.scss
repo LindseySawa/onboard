@@ -1,0 +1,53 @@
+.message{
+  margin: 25px auto;
+    p{
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+  form{
+    .message-body{
+      width: 40%;
+      margin: 0 auto;
+      tr{
+        th{
+          width: 30%;
+        }
+        td{
+          width: 70%;
+          input, textarea{
+            width: 100%;
+            outline: none;
+            font-size: 15px;
+          }
+          input{
+            height: 30px;
+          }
+          textarea{
+            height: 250px;
+            border-color: lightgray;
+          }
+          p{
+            padding: 15px 0;
+          }
+        }
+      }
+      .message-submit{
+        text-align: center;
+        height: 80px;
+        td{
+          height: 40px;
+          input{
+            background-color: #3d3d5c;
+            font-size: 20px;
+            color: white;
+            height: 40px;
+            width: 50%;
+
+            
+          }
+        }
+      }
+    }
+  }
+}

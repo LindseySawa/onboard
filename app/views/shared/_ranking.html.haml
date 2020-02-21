@@ -1,0 +1,11 @@
+%p Ranking
+%br
+.ranking-order
+  -@rank.each.with_index(1) do |post, i|
+    .ranking-order__box
+      .box-each
+        .box-each__rank
+          = icon('fas', 'crown')
+          %span No.#{i}
+        = link_to post_path(post.id) do
+          = image_tag(post.image.url)

@@ -1,0 +1,15 @@
+.newitems{
+  margin: 50px 180px 10px 180px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  .newitem{
+    width: 23%;
+    height: 230px;
+    margin-bottom: 70px;
+    img{
+      width: 100%;
+      height: 230px;  
+    }
+  }
+}

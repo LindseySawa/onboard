@@ -1,0 +1,31 @@
+=render "shared/header"
+
+.login
+  .login__left
+    %h2 ログイン
+    %br
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field
+        = f.label :アドレス
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email"
+        .line
+      .field
+        = f.label :パスワード
+        %br/
+        = f.password_field :password, autocomplete: "current-password"
+        .line
+      - if devise_mapping.rememberable?
+        .field-box
+          = f.check_box :remember_me
+          = f.label :remember_me
+      .actions
+        = f.submit "LOG IN"
+  .login__right
+    .links
+      %p 登録がお済みでない方はこちらから
+      %br
+      .link
+        = render "devise/shared/links"
+        %br
+        %p パスワードをお忘れの方はこちら

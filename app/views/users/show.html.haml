@@ -1,0 +1,36 @@
+= render "shared/header"
+
+.myprofile
+  .myprofile-detail
+    .myprofile-detail__icon
+      = icon('fas', 'user-circle')
+    .myprofile-detail__info
+      %table
+        %tr
+          %th 名前：
+          %td
+            = @user.username
+        %tr
+          %th 好きな旅行先：
+          %td
+            = @user.fav_country
+        %tr
+          %th オススメスポット：
+          %td
+            = @user.fav_spot
+        %tr
+          %th ホームページ：
+          %td
+            = @user.sns_hp
+        %tr.introduction
+          %th.introduction 自己紹介：
+          %td.introduction
+            = @user.introduction
+
+
+
+  .myprofile-post
+    = render "shared/mypost"
+    = paginate @posts
+
+= render "shared/footer"

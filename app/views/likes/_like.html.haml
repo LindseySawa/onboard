@@ -1,0 +1,44 @@
+-# -if current_user.likes.find_by(post_id: @post.id)
+-#   #like
+-#     = link_to post_like_path(@post, current_user.likes.find_by(post_id: @post.id)), method: :delete, remote: true do
+-#       = icon('fas','heart')
+-# - else
+-#   #unlike
+-#     = link_to post_likes_path(@post,current_user.likes.build),method: :post, remote: true do
+-#       = icon('far','heart')
+
+
+-# -if user_signed_in? 
+-#   -if @post.like_user(current_user.id)
+-#     = button_to "/posts/#{@post.id}/likes", id: "like-button", method: :delete, remote: true do
+-#       = icon('fas','heart')
+-#       %span
+-#         = @post.like_count
+-#   - else
+-#     = button_to "/posts/#{@post.id}/likes", id: "like-button", method: :post, remote: true do
+-#       = icon('far','heart')
+-#       %span
+-#         = @post.like_count
+-# -else
+-#   = icon('far','heart')
+-#   -# -if likes.any?
+-#   %span0p
+-#     = @post.like_count
+
+-if current_user.likes.find_by(post_id: @post.id)
+  #liked
+    = link_to post_like_path(@post, current_user.likes.find_by(post_id: @post.id)), method: :delete, remote: true do
+      = icon('fas', 'heart')
+    %span
+      -# = @post.like_count
+      -# = @likes_count
+
+-else
+  #like
+    = link_to post_likes_path(@post,current_user.likes.build), method: :post, remote: true do
+      = icon('far', 'heart')
+    %span
+      -# = @post.like_count
+      -# = @likes_count
+
+

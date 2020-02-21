@@ -1,0 +1,122 @@
+= render "shared/header"
+.ownposts
+  .username
+    =link_to user_path(@user) do
+      =insert_name(@post.user.username)
+    -# = @post.user.username
+    %span さんの投稿
+  .ownp
+    .ownpost
+      .ownpost-one
+        .left
+          =image_tag @post.image.url
+
+        .right
+          .right__top
+            .title
+              %p
+                = @post.title
+          .right__details
+            .country
+              %p 国名
+              %span :
+              -# = Country.find(@post.country_id)&.name
+              -# = @post.country
+            .city
+              %p 都市名
+              %span :
+              = @post.city
+            .how
+              %p 撮影方法
+              %span :
+              = @post.how
+
+          .right__discription
+            = @post.discription
+
+          -if @post.user.id == current_user.id
+            -# .right__button
+            .right__edit
+              = link_to edit_post_path(@post), method: :get, class:"edit-btn" do
+                = icon('fas', 'edit')
+            .right__delete
+              = link_to post_path(@post), method: :delete, class:"delete-btn" do
+                = icon('fas', 'trash-alt')
+          -# -else
+          .right__like
+            = render "likes/like"
+            -# , locals: { post: @post, posts: @posts, likes: @likes, like: @like }
+
+
+      -# -if @post.user_id != current_user.id
+      -#   .comment-form
+      -#     = form_for [@post, @comment] do |f|
+      -#       = f.hidden_field :post_id, value: @post.id
+      -#       = f.text_area :content
+      -#       %br
+      -#       = f.submit "Comment", class: "comment-submit"
+
+      -#     -if @comments.any?
+      -#       .comments
+      -#         -@comments.each do |c|
+      -#           .comments-box
+      -#             .comments-box__name
+      -#               = c.user.username unless c.user.blank?
+      -#               -# =link_to user_path(@user) do
+      -#               -#   = insert_name(@comments.user.username)
+      -#             .comments-box__comment
+      -#               = c.content
+      -if @comments.any?
+        .comment
+          .comments
+            %p
+              = icon('far','comment-dots')
+              %span Comments
+            -@comments.each do |c|
+              -# -if @comments.blank?
+              .comments-box
+                .comments-box__name
+                  = c.user.username unless c.user.blank?
+                  -# =link_to user_path(@user) do
+                  -#   = insert_name(@comments.user.username)
+                .comments-box__comment
+                  = c.content
+
+        -if @post.user_id != current_user.id
+          .comment-form
+            = form_for [@post, @comment] do |f|
+              = f.hidden_field :post_id, value: @post.id
+              = f.text_area :content
+              %br
+              = f.submit "Comment", class: "comment-submit"
+
+    
+
+    -if @post.user.id != current_user.id
+      .other-posts
+        =link_to user_path(@user) do
+          =insert_name(@post.user.username)
+        -# = @post.user.username
+        %span さん
+        %br
+        %span その他の投稿
+        .other
+          -@posts.each do |f|
+            .other__image
+              = link_to post_path(f.id) do
+                = image_tag(f.image.url)
+    -else
+      .other-posts
+        =link_to user_path(@user) do
+          =insert_name(@post.user.username)
+        -# = @post.user.username
+        %span さん
+        %br
+        %span#notmine その他の投稿
+        .other
+          -@posts.each do |f|
+            .other__image
+              = link_to post_path(f.id) do
+                = image_tag(f.image.url)
+
+= render "shared/footer"

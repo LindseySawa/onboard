@@ -1,0 +1,49 @@
+.myprofile{
+  margin: 30px 200px;
+
+  .myprofile-detail{
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    &__icon{
+      width: 200px;
+      text-align: center;
+
+      i{
+        font-size: 100px;
+        line-height: 200px;
+
+      }
+    }
+    &__info{
+      width: 500px;
+      padding: 30px;
+      height: auto;
+      overflow: hidden;
+      table{
+        tr{
+          th{
+            width: 40%;
+          }
+          td{
+            font-weight: bold;
+            text-align: center;
+          }
+        }
+        tr.introduction{
+          height: auto;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  .myprofile-post{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+
+
+

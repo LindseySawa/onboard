@@ -1,0 +1,4 @@
+-@posts.each do |p|
+  .mypost
+    = link_to post_path(p.id) do
+      = image_tag(p.image.url)

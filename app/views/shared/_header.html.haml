@@ -1,0 +1,24 @@
+%header
+  .header
+    .header__home 
+      = link_to "OnBoard", "/", data: {"turbolinks"=>false}
+
+    %ul.side
+      -# %li.header__new
+      -#   = link_to "New", "/posts/place", data: {"turbolinks"=>false}
+      %li.header__post
+        =link_to "Post", "/posts/new", data: {"turbolinks"=>false}
+      %li.header__search
+        = link_to "Search", "/posts/search", data: {"turbolinks"=>false}
+      -if user_signed_in?
+        %li.header__mypage
+          = link_to "My page",user_path(@user, id: current_user.id), data: {"turbolinks"=>false}
+        %li.header__logout
+          = link_to "Log out", "/users/sign_out", method: :delete, data: {"turbolinks"=>false}
+      -else
+        %li.header__signup
+          = link_to "Sign up", "/users/sign_up", data: {"turbolinks"=>false}
+
+        %li.header__login
+          = link_to "Log in", "/users/sign_in", data: {"turbolinks"=>false}
+

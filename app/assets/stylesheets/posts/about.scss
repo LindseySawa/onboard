@@ -1,0 +1,36 @@
+.about{
+  margin: 50px 300px;
+  .about-main{
+    width: 100%;
+    margin: 0 auto;
+    .profile, .story, .globe, .why{
+      height: 200px;
+      display: flex;
+      .icon{
+        background-color: #787878;
+        width: 25%;
+        color: white;
+        padding: 5px;
+        i{
+          font-size: 100px;
+        }
+      }
+      .detail{
+        width: 75%;
+        padding: 50px;
+      }
+    }
+    .story, .why{
+      .icon{
+        i{
+          float: right;
+        }
+      }
+      .detail{
+        p{
+          text-align: right;
+        }
+      }
+    }
+  }
+}

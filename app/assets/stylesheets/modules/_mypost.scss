@@ -1,0 +1,69 @@
+.myprofile-post{
+  .mypost{
+    width: 28%;
+    height: 250px;
+    margin: 20px 0;
+    a{
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+// .mypost{
+//   height: 500px;
+//   width: 40%;
+//   margin-bottom: 50px;
+//   padding: 5px;
+//   .top{
+//     height: 65%;
+//     width: 100%;
+//     border: lightgray 1px solid;
+//     .image{
+//       width: 100%;
+//       height: 100%;     
+//     }
+//   }
+//   .middle{
+//     display: flex;
+//     height: 5%;
+//     .country{
+//       width: 33%;
+//       text-align: center;
+//       line-height: 25px;
+//       p{
+//         font-size: 12px;
+//       }
+//     }
+//     .city{
+//       width: 33%;
+//       text-align: center;
+//       line-height: 25px;
+//       p{
+//         font-size: 12px;
+//       }
+//     }
+//     .how{
+//       width: 33%;
+//       text-align: center;
+//       line-height: 25px;
+//       p{
+//         font-size: 12px;
+//       }
+//     }
+//   }
+
+//   .bottom{
+//     width: 100%;
+//     height: 30%;
+//     border: lightgray 1px solid;
+//     .discription{
+//       padding: 10px;
+//     }
+//   }
+// }

@@ -1,0 +1,205 @@
+.ownposts{
+  margin: 30px 100px 30px 100px;
+  height: auto;
+  .username{
+    width: 100%;  
+    height: 30px;
+    font-size: 25px;
+    margin: 5px;
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    span{
+      font-size: 10px;
+    }
+  }
+  .ownp{
+    display: flex;
+    .ownpost{
+      width: 80%;
+      .ownpost-one{
+        width: 80%;
+        height: 370px;
+        display: flex;
+        margin: 0 auto;
+        border: lightgray 1px solid;
+        flex-wrap: wrap;
+        .left{
+          width: 40%;
+          height: 90%;
+          padding: 15px;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .right{
+          width: 55%;
+          position: relative;
+          &__top{
+            display: flex;
+            padding: 7px;
+            .title{
+              width: 100%;
+              p{
+                text-align: center;
+                font-size: 20px;
+                line-height: 40px;
+              }
+            }
+          }
+          &__details{
+            height: 10%;
+            display: flex;
+            margin: 10px;
+            #text{
+              border-bottom: solid lightgray 1px;
+            }
+            .country, .city, .how{
+              width: 33%;
+              text-align: center;
+              line-height: 30px;
+              p{
+                font-size: 15px;
+                display: inline-block;
+                border-bottom: solid lightgray 1px;
+                font-weight: bold;
+
+              }
+            }
+          }
+
+          &__discription{
+            padding: 10px;
+            min-height: 200px;
+            font-weight: 500;
+          }
+          &__edit{
+            .edit-btn{
+              color: navy;
+              position: absolute;
+              // right: 40px;
+              bottom: 10px;
+              font-size: 18px;
+            }
+          }
+          &__delete{
+            .delete-btn{
+              color: red;
+              position: absolute;
+              left: 30px;
+              bottom: 9px;
+              font-size: 18px;      
+            }
+          }
+          &__like{
+            float: right;
+            position: absolute;
+            bottom: 7px;
+            right: 5px;
+            font-size: 30px;
+            #liked{
+              a{
+                text-decoration: none;
+                color: red;
+              }
+            }
+            #like{
+              a{
+                text-decoration: none;
+                color: red;
+              }
+            }
+          }
+        }
+      }
+      .comment{
+        margin-top: 50px;
+        .comments{
+          width: 60%;
+          margin: 0 auto;
+          border: #e6e6e6 1px solid;
+          border-radius: 10px;
+          p{
+            background-color: #e6e6e6;
+            font-size: 18px;
+            padding: 10px;
+          }
+          .comments-box{
+            // border-top: #e6e6e6 1px dotted;
+            padding: 10px 10px 10px 20px;
+            &__name{
+              color: black;
+              font-size: 15px;
+            }
+            &__comment{
+              width: 90%;
+              margin: 5px auto;
+              font-size: 11px;
+            }
+
+          }
+        }
+      }
+      .comment-form{
+        width: 60%;
+        margin: 20px auto;
+        form{
+          padding: 10px;
+          text-align: center;
+          textarea{
+            width: 90%;
+            height: 100px;
+            border: lightgray 1px solid;
+            outline: none;
+            border-radius: 20px;
+            padding: 5px;
+          }
+          .comment-submit{
+            width: 80%;
+            text-align: center;
+            background-color: #e6e6e6;
+            color: #514D4D;
+            height: 30px;
+            font-size: 15px;
+            text-decoration: none;
+            border: none;
+          }
+        }
+      }
+    }
+    .other-posts{
+      width: 15%;
+      text-align: center;
+      font-size: 15px;
+      background-color: #e6e6e6;
+      padding-top: 10px;
+      a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+      span{
+        font-size: 13px;
+      }
+      #notmine{
+        font-size: 15px;
+        font-weight: bold;
+      }
+        .other{
+        width: 90%;
+        &__image{
+          height: 200px;
+          width: 100%;
+          margin: 10px;
+          img{
+            height: 100%;
+            width: 100%;
+            
+          }
+        }
+      }
+    }
+  }
+}
