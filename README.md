@@ -39,6 +39,10 @@ Things you may want to cover:
 |user_id|reference|null: false, foreign_key: true|
 
 ### Association
+belongs_to :user, optional: true
+has_many :comments
+has_many :likes, dependent: :destroy
+
 
 
 ## usersテーブル
@@ -54,23 +58,10 @@ Things you may want to cover:
 |sns_hp|text||
 
 ### Association
+has_many :posts, dependent: :destroy
+has_many :comments
+has_many :likes, dependent: :destroy
 
-
-## postsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|null: false, foreign_key: true|
-|image|string||
-|title|string||
-|country|string||
-|city|string||
-|how|string||
-|discription|text|null:false|
-|like_count|integer||
-|user_id|reference|null: false, foreign_key: true|
-
-### Association
 
 
 ## commentsテーブル
@@ -83,6 +74,9 @@ Things you may want to cover:
 |user_id|reference|null: false, foreign_key: true|
 
 ### Association
+belongs_to :user
+belongs_to :post
+
 
 
 ## likesテーブル
