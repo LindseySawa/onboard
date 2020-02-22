@@ -22,3 +22,88 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## postsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, foreign_key: true|
+|image|string||
+|title|string||
+|country|string||
+|city|string||
+|how|string||
+|discription|text|null:false|
+|like_count|integer||
+|user_id|reference|null: false, foreign_key: true|
+
+### Association
+
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, foreign_key: true|
+|username|string|null: false|
+|email|string|null: false|
+|fav_country|string|null: false|
+|fav_spot|string||
+|introduction|text|null: false|
+|sns_hp|text||
+
+### Association
+
+
+## postsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, foreign_key: true|
+|image|string||
+|title|string||
+|country|string||
+|city|string||
+|how|string||
+|discription|text|null:false|
+|like_count|integer||
+|user_id|reference|null: false, foreign_key: true|
+
+### Association
+
+
+## commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, foreign_key: true|
+|content|text||
+|post_id|reference|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
+
+### Association
+
+
+## likesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, foreign_key: true|
+|post_id|reference|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
+
+### Association
+
+
+## messagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, foreign_key: true|
+|email|string|null: false|
+|content|text|null: false|
+
+### Association
+
+
