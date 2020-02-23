@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_19_165910) do
+ActiveRecord::Schema.define(version: 2020_02_23_065437) do
 
   create_table "areas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
   end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "content"
+    t.text "content", null: false
     t.bigint "post_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
@@ -56,9 +56,9 @@ ActiveRecord::Schema.define(version: 2020_02_19_165910) do
     t.datetime "updated_at"
     t.integer "like_count"
     t.string "title"
-    t.string "country"
+    t.string "country", null: false
     t.bigint "user_id"
-    t.string "image", null: false
+    t.string "image"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 2020_02_19_165910) do
     t.text "sns_hp"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
   add_foreign_key "comments", "posts", name: "comments_ibfk_3"

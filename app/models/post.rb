@@ -2,6 +2,10 @@ class Post < ApplicationRecord
   belongs_to :user, optional: true
   has_many :comments
   has_many :likes, dependent: :destroy
+  validates :image, presence: true
+  validates :country, presence: true
+  validates :discription, presence: true
+  
 
   # def like_user(user_id)
   #   likes.find_by(user_id: user_id)
