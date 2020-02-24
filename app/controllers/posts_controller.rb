@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :authenticate_user!, except: :index
+  # before_action :authenticate_user!, except: :index
 
   def index
     @posts = Post.order("created_at DESC").limit(8)
@@ -32,9 +32,9 @@ class PostsController < ApplicationController
 
   end
 
-  def place 
-    @posts = Post.order("created_at DESC").page(params[:page]).per(60)
-  end
+  # def place 
+  #   @posts = Post.order("created_at DESC").page(params[:page]).per(60)
+  # end
 
   def search
     # @q = Post.ransack(params[:q])
@@ -65,7 +65,7 @@ class PostsController < ApplicationController
       if @post.user_id == current_user.id
         @post.destroy
       end
-    redirect_to place_posts_path
+    redirect_to posts_path
   end
 
   def about
