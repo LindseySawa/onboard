@@ -38,7 +38,29 @@ describe PostsController, type: :controller do
       get :show, params: {id: post}
       expect(response).to render_template :show
     end
+  end
+  
+  describe 'GET #edit' do
+    let(:post) {FactoryBot.create :post}
 
-  end   
+    it "successes a request" do
+      get :edit, params: { id: post }
+      expect(response.status).to eq 200
+    end
+
+    it "render the :edit template" do
+      get :edit, params: { id: post }
+      expect(response).to render_template :edit
+    end
+  end
+
+  # describe 'DELETE #destroy' do
+  #   let(:user) {FactoryBot.create :user}
+
+  #   it 'リクエストが成功すること' do
+  #     delete :destroy, params: { id: user }
+  #     expect(response.status).to eq 302
+  #   end
+  # end
 
 end
