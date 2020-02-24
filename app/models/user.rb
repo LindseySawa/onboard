@@ -8,8 +8,10 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :messages
   validates :email, presence: true
-  validates :username, presence: true
+  validates :username, presence: true, uniqueness: true
+  validates :password, presence: true, length: { minimum: 8 }  #7文字以上
+  validates :password_confirmation, presence: true, length: { minimum: 8 } #7文字以上
   validates :fav_country, presence: true
   validates :introduction, presence: true
-  validates :username, uniqueness: true
 end
+ 
