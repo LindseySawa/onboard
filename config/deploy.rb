@@ -3,7 +3,7 @@
 lock '3.12.0'
 
 # Capistranoのログの表示に利用する
-set :application, '<onboard3>'
+set :application, 'onboard3'
 
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'git@github.com:LindseySawa/onboard.git'
