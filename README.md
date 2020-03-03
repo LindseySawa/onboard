@@ -7,7 +7,7 @@ OnBoard
 ## 概要
 
 LindseySawa/onboard(https://github.com/LindseySawa/onboard) 
-- ガイドブックに載ってないよりレアな情報を共有、旅行先検索ツール。
+- ガイドブックに載ってないよりローカルでレアな情報を共有、旅行先検索ツール。
 
 ## 制作理由
 
