@@ -22,8 +22,8 @@ LindseySawa/onboard(https://github.com/LindseySawa/onboard)
 http://18.178.109.224
 
   - テストアカウント
-    - アドレス: onboard@onboard
-    - パスワード: 12345678
+    - アドレス: 'onboard@onboard'
+    - パスワード: '12345678'
 
 ## 工夫した点
 - 写真の邪魔にならないようにデザインを可能な限りシンプルに作成
