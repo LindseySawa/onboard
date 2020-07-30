@@ -1,38 +1,48 @@
-= render "shared/header"
+.wrap
+  = render "shared/header"
 
-.container
+  .container
 
-  .slider
-    .slider-left
-      %p  ~Every hundred feet 
-      %p.bottom  the world changes~
-      %span 100フィーとごとに世界は変わる
-    .slider-right
-      .slider-right__one
-        %p
-          =image_tag "mainbox1.jpg", alt: "メインボックス1", class: "mainbox1"
-          =image_tag "mainbox2.jpg", alt: "メインボックス2", class: "mainbox2"
-      .slider-right__two
-        %p
-          =image_tag "mainbox3.jpg", alt: "メインボックス3", class: "mainbox3"
-          =image_tag "mainbox4.jpg", alt: "メインボックス4", class: "mainbox4"
-
-  .explanation
-    %p 次の休みどこか行きたいけど、どこがいいかな？
-    %p 偶然SNSで見た写真、、、行きたい！と思ったことはありませんか？
-    %p.point 今まであなたが知らなかった世界を探求してみましょう！
-    %p OnBoardで自身の旅行記を共有！他の投稿で次の旅行先も見つけちゃおう！
-    %p 風景のみではなく、食べ物などの思い出も共有しちゃいましょう♩
-
-  .ranking
-    = render "shared/ranking"
-
-  .posts
-    %p New Post
-  .newitems
-    = render "shared/newpost"
+    %ul.slider
+      %li.slider__one
+        =image_tag "mainbox1.jpg", alt: "mainbox1", class: "banner"
+      %li.slider__one
+        =image_tag "mainbox2.jpg", alt: "mainbox2", class: "banner__resize"
+      %li.slider__one
+        =image_tag "mainbox3.jpg", alt: "mainbox3", class: "banner"
+      %li.slider__one
+        =image_tag "mainbox4.jpg", alt: "mainbox4", class: "banner"
     
-= render "shared/footer"
-    
-    
+      -# .slider-left
+      -#   %p  ~Every hundred feet 
+      -#   %p.bottom  the world changes~
+      -#   %span 100フィーとごとに世界は変わる
+      -# .slider-right
+      -#   .slider-right__one
+      -#     %p
+      -#       =image_tag "mainbox1.jpg", alt: "メインボックス1", class: "mainbox1"
+      -#       =image_tag "mainbox2.jpg", alt: "メインボックス2", class: "mainbox2"
+      -#   .slider-right__two
+      -#     %p
+      -#       =image_tag "mainbox3.jpg", alt: "メインボックス3", class: "mainbox3"
+      -#       =image_tag "mainbox4.jpg", alt: "メインボックス4", class: "mainbox4"
+
+    .explanation
+      %p 次の休みどこか行きたいけど、どこがいいかな？
+      %p 偶然SNSで見た写真、、、行きたい！と思ったことはありませんか？
+      %p.point 今まであなたが知らなかった世界を探求してみましょう！
+      %p OnBoardで自身の旅行記を共有！他の投稿で次の旅行先も見つけちゃおう！
+      %p 風景のみではなく、食べ物などの思い出も共有しちゃいましょう♩
+
+    .ranking
+      = render "shared/ranking"
+
+    .posts
+      %p New Post
+    .newitems
+      = render "shared/newpost"
+      
+  = render "shared/footer"
+      
+      
 
