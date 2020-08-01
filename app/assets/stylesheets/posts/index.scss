@@ -28,6 +28,19 @@
       //   }
       }
     }
+
+    .message{
+      height: 100px;
+      text-align: center;
+      &__index{
+        p{
+          font-family: 'Amatic SC', cursive;
+          font-size: 30px;
+          padding-top: 30px;
+        }
+      }
+      
+    }
     // .discription{
     //   .reason{
     //     display: flex;
@@ -121,70 +134,70 @@
       }
     }
 
-    .slider{
-      height: 480px;
-      display: flex;
-      background: white;
-      .slider-left{
-        width: 50%;
-        padding-left: 100px;
-        margin: auto;
+    // .slider{
+    //   height: 480px;
+    //   display: flex;
+    //   background: white;
+    //   .slider-left{
+    //     width: 50%;
+    //     padding-left: 100px;
+    //     margin: auto;
 
-        p{
-          font-size: 40px;
-          font-family: 'Amatic SC', cursive;
+    //     p{
+    //       font-size: 40px;
+    //       font-family: 'Amatic SC', cursive;
 
-        }
-        .bottom{
-          padding-left: 30px;
-        }
-        span{
-          font-size: 13px;
-          padding: 20px 0 0 80px;
+    //     }
+    //     .bottom{
+    //       padding-left: 30px;
+    //     }
+    //     span{
+    //       font-size: 13px;
+    //       padding: 20px 0 0 80px;
 
-        }
+    //     }
 
-      }
-      .slider-right{
-        width: 50%;
-        float: right;
-        &__one{
-          display: flex;
-          p{
-            text-align: right;
-            padding: 10px 0;
-          }
-          .mainbox1{
-            width: 50%;
-            height: 200px;
-            padding-right: 10px;
-          }
-          .mainbox2{
-            width: 35%;
-            height: 200px;
-          }
-        }
-        &__two{
-          display: flex;
-          height: 250px;
-          p{
-            text-align: right;
-            height: 200px;
+    //   }
+    //   .slider-right{
+    //     width: 50%;
+    //     float: right;
+    //     &__one{
+    //       display: flex;
+    //       p{
+    //         text-align: right;
+    //         padding: 10px 0;
+    //       }
+    //       .mainbox1{
+    //         width: 50%;
+    //         height: 200px;
+    //         padding-right: 10px;
+    //       }
+    //       .mainbox2{
+    //         width: 35%;
+    //         height: 200px;
+    //       }
+    //     }
+    //     &__two{
+    //       display: flex;
+    //       height: 250px;
+    //       p{
+    //         text-align: right;
+    //         height: 200px;
 
-          }
-          .mainbox3{
-            width: 40%;
-            padding-right: 10px;
-            height: 200px;
+    //       }
+    //       .mainbox3{
+    //         width: 40%;
+    //         padding-right: 10px;
+    //         height: 200px;
 
-          }
-          .mainbox4{
-            width: 50%
-          }
-        }
+    //       }
+    //       .mainbox4{
+    //         width: 50%
+    //       }
+    //     }
 
-      }
-    }
+    //   }
+    // }
 
   }
 
