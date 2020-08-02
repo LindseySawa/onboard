@@ -7,5 +7,6 @@ $(function () {
     // autoplaySpeed: 3000,
     centerMode: true,
     variableWidth: true,
+    dots: true,
   });
 });
