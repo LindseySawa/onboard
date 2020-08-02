@@ -1,7 +1,7 @@
 =render "shared/header"
 .wrap-login
   .login
-    .login__left
+    .login__top
       %h2 ログイン
       %br
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
@@ -18,14 +18,10 @@
         - if devise_mapping.rememberable?
           .field-box
             = f.check_box :remember_me
-            = f.label :remember_me
+            = f.label :次回から自動ログイン
         .actions
-          = f.submit "LOG IN"
-    .login__right
-      .links
-        %p 登録がお済みでない方はこちらから
-        %br
-        .link
-          = render "devise/shared/links"
-          %br
-          %p パスワードをお忘れの方はこちら
+          = f.submit "ログイン"
+      .login__bottom
+        .links
+          .link
+            = render "devise/shared/links"
