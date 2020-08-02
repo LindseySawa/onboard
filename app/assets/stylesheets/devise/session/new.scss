@@ -1,67 +1,70 @@
-.login{
-  margin: 30px 250px;
-  display: flex;
-  font-family: "Gill Sans", sans-serif;
+.wrap-login{
+  background-color: #FAFAFA;
+  height: 100%;
+  .login{
+    margin: 0 250px;
+    display: flex;
+    font-family: "Gill Sans", sans-serif;
+    padding-top: 50px;
 
-  &__left{
-    width: 50%;
-    padding: 15px;
-    h2{
-      font-size: 25px;
-    }
-    .field{
-      label{
-        font-size: 15px;
-      }
-      input{
-        width: 95%;
-        height: 25px;
-        outline: none;
-        margin: 5px;
-        border: none;
-        background-color: #FAFAFA;
-        font-size: 15px;
-      }
-      .line{
-        width: 95%;
-        height: 2px;
-        border-top: black solid 2px;
-      }
-    }
-    .actions{
-      margin: 20px auto;
-      text-align: center;
-
-      input{
+    &__left{
+      width: 50%;
+      padding: 15px;
+      h2{
         font-size: 25px;
-        background-color: #3d3d5c;
-        color: white;
-        outline: none;
-        padding: 5px;
-        border: none;
       }
-    }
-  }
-  &__right{
-    width: 50%;
-    .links{
-      padding-top: 80px;
-      p{
-        font-size: 15px;
-        text-align: center;
+      .field{
+        label{
+          font-size: 15px;
+        }
+        input{
+          width: 95%;
+          height: 25px;
+          outline: none;
+          margin: 5px;
+          border: none;
+          background-color: #FAFAFA;
+          font-size: 15px;
+        }
+        .line{
+          width: 95%;
+          height: 2px;
+          border-top: black solid 2px;
+        }
       }
-      .link{
+      .actions{
+        margin: 20px auto;
         text-align: center;
-        a{
-          color: white;
+
+        input{
           font-size: 25px;
-          text-decoration: none;
           background-color: #3d3d5c;
+          color: white;
+          outline: none;
           padding: 5px;
+          border: none;
         }
       }
     }
-
-
+    &__right{
+      width: 50%;
+      .links{
+        padding-top: 80px;
+        p{
+          font-size: 15px;
+          text-align: center;
+        }
+        .link{
+          text-align: center;
+          a{
+            color: white;
+            font-size: 25px;
+            text-decoration: none;
+            background-color: #3d3d5c;
+            padding: 5px;
+          }
+        }
+      }
+    }
   }
 }
