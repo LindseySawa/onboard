@@ -1,64 +1,59 @@
-.newpass{
-  margin: 30px 250px;
-  display: flex;
-  font-family: "Gill Sans", sans-serif;
-  &__left{
-    // background-color: white;
-    // border: gray 1px  solid;
-    width: 50%;
-    padding: 15px;
+.wrap-newpass{
+  background-color: #FAFAFA;
+  height: 100%;
+  .newpass{
+    width: 30%;
+    padding-top: 50px;
+    margin: 0 auto;
     h2{
       font-size: 25px
     }
-    .field{
-      label{
-        font-size: 20px;
+    &__top{
+      .field{
+        margin-top: 20px;
+        label{
+          font-size: 15px;
+        }
+        input{
+          width: 95%;
+          height: 25px;
+          outline: none;
+          margin: 5px;
+          border: none;
+          background-color: #FAFAFA;
+          font-size: 15px;
+        }
+        .line{
+          width: 95%;
+          height: 2px;
+          border-top: black solid 2px;
+        }
       }
-      input{
-        width: 95%;
-        height: 25px;
-        outline: none;
-        margin: 5px;
-        border: none;
-        background-color: #FAFAFA;
-        font-size: 15px;
-      }
-      .line{
-        width: 95%;
-        height: 2px;
-        border-top: black solid 2px;
-      }
-    }
-    .actions{
-      input{
-        color: white;
-        font-size: 18px;
-        text-decoration: none;
-        background-color: #3d3d5c;
-        padding: 5px;
-        outline: none;
-        margin: 10px 80px;
-      }
-    }
-  }
-  &__right{
-    // background-color: white;
-    // border: gray 1px solid;
-    width: 50%;
-    .links{
-      padding-top: 50px;
-      p{
-        font-size: 17px;
+      .actions{
         text-align: center;
-      }
-      .link{
-        text-align: center;
-        a{
+        margin-top: 30px;
+        input{
           color: white;
-          font-size: 25px;
+          font-size: 20px;
           text-decoration: none;
           background-color: #3d3d5c;
-          padding: 5px;
+          outline: none;
+          margin-top: 10px;
+          font-family: "M PLUS 1p";
+        }
+      }
+    }
+    &__bottom{
+      .links{
+        padding-top: 50px;
+        .link{
+          text-align: center;
+          a{
+            color: #3d3d5c;
+            font-size: 15px;
+            text-decoration: none;
+            text-align: center;
+          }
         }
       }
     }

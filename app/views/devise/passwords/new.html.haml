@@ -1,22 +1,19 @@
 =render "shared/header"
 
-.newpass
-  .newpass__left
+.wrap-newpass
+  .newpass
     %h2 パスワード再設定
-    = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-      = render "devise/shared/error_messages", resource: resource
-      .field
-        = f.label :email
-        %br/
-        = f.email_field :email, autofocus: true, autocomplete: "email"
-        .line
-      .actions
-        = f.submit "Send me reset password instructions"
-  .newpass__right
-    .links
-      %p ログインが必要な方はこちらから
-      %br
-      .link
-        = render "devise/shared/links"
-        %br
-        %p 新規登録が必要な方はこちらから
+    .newpass__top
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .field
+          = f.label :メールアドレス
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+          .line
+        .actions
+          = f.submit "パスワード再設定"
+    .newpass__bottom
+      .links
+        .link
+          = render "devise/shared/links"
