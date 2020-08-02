@@ -1,38 +1,63 @@
-= render "shared/header"
+.wrap
+  = render "shared/header"
 
-.container
+  .container
 
-  .slider
-    .slider-left
-      %p  ~Every hundred feet 
-      %p.bottom  the world changes~
+    %ul.slider
+      %li.slider__one
+        =image_tag "mainbox1.jpg", alt: "mainbox1", class: "banner"
+      %li.slider__one
+        =image_tag "mainbox2.jpg", alt: "mainbox2", class: "banner__resize"
+      %li.slider__one
+        =image_tag "mainbox3.jpg", alt: "mainbox3", class: "banner"
+      %li.slider__one
+        =image_tag "mainbox4.jpg", alt: "mainbox4", class: "banner"
+    
+    .message__top
+      %p ~Every hundred feet the world changes~
       %span 100フィーとごとに世界は変わる
-    .slider-right
-      .slider-right__one
-        %p
-          =image_tag "mainbox1.jpg", alt: "メインボックス1", class: "mainbox1"
-          =image_tag "mainbox2.jpg", alt: "メインボックス2", class: "mainbox2"
-      .slider-right__two
-        %p
-          =image_tag "mainbox3.jpg", alt: "メインボックス3", class: "mainbox3"
-          =image_tag "mainbox4.jpg", alt: "メインボックス4", class: "mainbox4"
 
-  .explanation
-    %p 次の休みどこか行きたいけど、どこがいいかな？
-    %p 偶然SNSで見た写真、、、行きたい！と思ったことはありませんか？
-    %p.point 今まであなたが知らなかった世界を探求してみましょう！
-    %p OnBoardで自身の旅行記を共有！他の投稿で次の旅行先も見つけちゃおう！
-    %p 風景のみではなく、食べ物などの思い出も共有しちゃいましょう♩
+    .use
+      .use__detail.use__detail--leftmiddle
+        .use__detail--image
+          =image_tag "email22.jpg"
+        .use__detail--exp
+          %p.top 登録をしよう!
+          %br/
+          %p 登録すると
+          %p 写真の詳細が見れるよ！
+          %p 検索機能も使える！
+      .use__detail.use__detail--leftmiddle
+        .use__detail--image
+          =image_tag "cam22.jpg"
+        .use__detail--exp
+          %p.top 写真を投稿しよう！
+          %br/
+          %p 写真詳細を書くと
+          %p 検索で他の人が
+          %p 探しやすくなるよ！
+      .use__detail
+        .use__detail--image
+          =image_tag "com22.jpg"
+        .use__detail--exp
+          %p.top 検索しよう！
+          %br/
+          %p 検索して
+          %p 次の旅行先を見つけよう！
 
-  .ranking
-    = render "shared/ranking"
+    .message__bottom
+      %p 今まであなたが知らなかった世界を探求！
+      %span 観光スポットからローカルな場所までみんなで投稿
+      
+    .ranking
+      = render "shared/ranking"
 
-  .posts
-    %p New Post
-  .newitems
-    = render "shared/newpost"
-    
-= render "shared/footer"
-    
-    
+    .posts
+      %p New Post
+    .newitems
+      = render "shared/newpost"
+      
+  = render "shared/footer"
+      
+      
 
