@@ -3,8 +3,8 @@
   .signup
     .signup-top
       %h2 新規登録
-      .link
-        = render "devise/shared/links"
+      -# .link
+      -#   = render "devise/shared/links"
 
     
     .signup-main
@@ -34,12 +34,13 @@
             %br/
             = f.password_field :password_confirmation, autocomplete: "new-password"
             .line
-        .signup__right
           .field
             = f.label :好きな旅行先
             %br/
             = f. text_field  :fav_country
             .line
+
+        .signup__right
           .field
             = f.label :オススメスポット
             %br/
@@ -58,3 +59,6 @@
 
         .actions
           = f.submit "サインアップ"
+          .link
+            = render "devise/shared/links"
+
