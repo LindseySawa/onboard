@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :authenticate_user!, except: :index
+  before_action :authenticate_user!, except: [:index, :about]
 
   def index
     @posts = Post.order("created_at DESC").limit(8)
