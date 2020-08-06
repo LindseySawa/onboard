@@ -27,13 +27,32 @@
     }
     .message__bottom{
       text-align: center;
-      margin-top: 30px;
+      margin-top: 50px;
       height: 150px;
       p{
         font-size: 20px;
         line-height: 60px;
       }
     }
+
+    // .popup{
+    //   width: 40%;
+    //   margin: 50px auto;
+    //   .icon{
+    //     width: 30%;
+    //   }
+    //   &__mail, &__cam, &__com{
+    //     display: flex;
+    //     &--message{
+    //       width: 60%;
+    //       // background-color: gray;
+    //       text-align: center;
+    //       padding: 10px 0;
+    //       box-sizing: border-box;
+  
+    //     }
+    //   }
+    // }
     .use{
       margin: 25px;
       height: 250px;
