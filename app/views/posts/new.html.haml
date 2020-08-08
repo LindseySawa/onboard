@@ -77,13 +77,13 @@
           %br
           .field
             = f.label :タイトル
-            = f.text_field :title, placeholder: "☆必須"
+            = f.text_field :title, placeholder: "必須"
             %br
 
           .field
             = f.label :国名
             -# = f.grouped_collection_select :country_id, Area.all, :countries, :name, :id, :name, include_blank: true
-            = f.text_field :country, placeholder: "☆必須"
+            = f.text_field :country, placeholder: "必須"
             -# %span  ※国名はバーの中から選択
             %br
           .field
