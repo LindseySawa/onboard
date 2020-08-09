@@ -96,7 +96,7 @@
             %br
           .discription
             = f.label :概要
-            = f.text_area :discription, placeholder: '写真について&#13;&#10;&#13;&#10;【例】&#13;&#10;いつ頃撮影したのか？&#13;&#10;そこまでのアクセス方法は？&#13;&#10;近くに〇〇という美味しいお店があった！などのプチ情報も！'.html_safe
+            = f.text_area :discription, maxlength: "250", placeholder: '写真について&#13;&#10;&#13;&#10;【例】&#13;&#10;いつ頃撮影したのか？&#13;&#10;そこまでのアクセス方法は？&#13;&#10;近くに〇〇という美味しいお店があった！などのプチ情報も！'.html_safe
           .bottom
             .submit
               = f.submit "投稿"

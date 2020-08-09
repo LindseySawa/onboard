@@ -1,7 +1,7 @@
 .ownposts{
   margin: 30px 100px 30px 100px;
   height: auto;
-  .username{
+  &__username{
     width: 100%;  
     height: 30px;
     font-size: 25px;
@@ -14,106 +14,144 @@
       font-size: 10px;
     }
   }
-  .ownp{
+  &__main{
     // display: flex;
-    .ownpost{
-      width: 100%;
-      .ownpost-one{
-        width: 60%;
-        height: 370px;
+    width: 40%;
+    margin: 0 auto;
+    &--top{
+      height: 50px;
+      display: flex;
+      .country, .city, .how{
         display: flex;
-        margin: 0 auto;
-        border: lightgray 1px solid;
-        flex-wrap: wrap;
-        .left{
-          width: 40%;
-          height: 90%;
-          padding: 15px;
-          img{
-            width: 100%;
-            height: 100%;
-          }
+        line-height: 50px;
+        width: 33%;
+        padding-left: 10px;
+        span{
+          padding: 0 5px;
         }
-        .right{
-          width: 55%;
-          position: relative;
-          &__top{
-            display: flex;
-            padding: 7px;
-            .title{
-              width: 100%;
-              p{
-                text-align: center;
-                font-size: 20px;
-                line-height: 40px;
-              }
-            }
-          }
-          &__details{
-            height: 10%;
-            display: flex;
-            margin: 10px;
-            #text{
-              border-bottom: solid lightgray 1px;
-            }
-            .country, .city, .how{
-              width: 33%;
-              text-align: center;
-              line-height: 30px;
-              p{
-                font-size: 15px;
-                display: inline-block;
-                border-bottom: solid lightgray 1px;
-                font-weight: bold;
-
-              }
-            }
-          }
-
-          &__discription{
-            padding: 10px;
-            min-height: 200px;
-            font-weight: 500;
-          }
-          &__edit{
-            .edit-btn{
-              color: navy;
-              position: absolute;
-              // right: 40px;
-              bottom: 10px;
-              font-size: 18px;
-            }
-          }
-          &__delete{
-            .delete-btn{
-              color: red;
-              position: absolute;
-              left: 30px;
-              bottom: 9px;
-              font-size: 18px;      
-            }
-          }
-          &__like{
-            float: right;
-            position: absolute;
-            bottom: 7px;
-            right: 5px;
-            font-size: 30px;
-            #liked{
-              a{
-                text-decoration: none;
-                color: red;
-              }
-            }
-            #like{
-              a{
-                text-decoration: none;
-                color: red;
-              }
-            }
-          }
+        .text{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
         }
       }
+    }
+    &--middle{
+      height: 350px;
+      background-color: lightgray;
+      position: relative;
+      img{
+        height: 90%;
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform : translate(-50%,-50%);
+        transform : translate(-50%,-50%);
+      }
+    }
+    &--bottom{
+      height: 180px;
+      padding: 20px 25px 0 25px;
+    }
+  }
+    // .ownpost{
+    //   width: 100%;
+    //   .ownpost-one{
+    //     width: 60%;
+    //     height: 370px;
+    //     display: flex;
+    //     margin: 0 auto;
+    //     border: lightgray 1px solid;
+    //     flex-wrap: wrap;
+    //     .left{
+    //       width: 40%;
+    //       height: 90%;
+    //       padding: 15px;
+    //       img{
+    //         width: 100%;
+    //         height: 100%;
+    //       }
+    //     }
+    //     .right{
+    //       width: 55%;
+    //       position: relative;
+    //       &__top{
+    //         display: flex;
+    //         padding: 7px;
+    //         .title{
+    //           width: 100%;
+    //           p{
+    //             text-align: center;
+    //             font-size: 20px;
+    //             line-height: 40px;
+    //           }
+    //         }
+    //       }
+    //       &__details{
+    //         height: 10%;
+    //         display: flex;
+    //         margin: 10px;
+    //         #text{
+    //           border-bottom: solid lightgray 1px;
+    //         }
+    //         .country, .city, .how{
+    //           width: 33%;
+    //           text-align: center;
+    //           line-height: 30px;
+    //           p{
+    //             font-size: 15px;
+    //             display: inline-block;
+    //             border-bottom: solid lightgray 1px;
+    //             font-weight: bold;
+
+    //           }
+    //         }
+    //       }
+
+    //       &__discription{
+    //         padding: 10px;
+    //         min-height: 200px;
+    //         font-weight: 500;
+    //       }
+    //       &__edit{
+    //         .edit-btn{
+    //           color: navy;
+    //           position: absolute;
+    //           // right: 40px;
+    //           bottom: 10px;
+    //           font-size: 18px;
+    //         }
+    //       }
+    //       &__delete{
+    //         .delete-btn{
+    //           color: red;
+    //           position: absolute;
+    //           left: 30px;
+    //           bottom: 9px;
+    //           font-size: 18px;      
+    //         }
+    //       }
+    //       &__like{
+    //         float: right;
+    //         position: absolute;
+    //         bottom: 7px;
+    //         right: 5px;
+    //         font-size: 30px;
+    //         #liked{
+    //           a{
+    //             text-decoration: none;
+    //             color: red;
+    //           }
+    //         }
+    //         #like{
+    //           a{
+    //             text-decoration: none;
+    //             color: red;
+    //           }
+    //         }
+    //       }
+    //     }
       .comment{
         margin-top: 50px;
         .comments{
@@ -141,7 +179,6 @@
               margin: 5px auto;
               font-size: 11px;
             }
-
           }
         }
       }
@@ -173,38 +210,37 @@
           }
         }
       }
-    }
-    .other-posts{
-      width: 15%;
-      text-align: center;
-      font-size: 15px;
-      background-color: #e6e6e6;
-      padding-top: 10px;
-      a{
-        text-decoration: none;
-        color: black;
-        font-size: 20px;
-      }
-      span{
-        font-size: 13px;
-      }
-      #notmine{
-        font-size: 15px;
-        font-weight: bold;
-      }
-        .other{
-        width: 90%;
-        &__image{
-          height: 200px;
-          width: 100%;
-          margin: 10px;
-          img{
-            height: 100%;
-            width: 100%;
+    // }
+    // .other-posts{
+    //   width: 15%;
+    //   text-align: center;
+    //   font-size: 15px;
+    //   background-color: #e6e6e6;
+    //   padding-top: 10px;
+    //   a{
+    //     text-decoration: none;
+    //     color: black;
+    //     font-size: 20px;
+    //   }
+    //   span{
+    //     font-size: 13px;
+    //   }
+    //   #notmine{
+    //     font-size: 15px;
+    //     font-weight: bold;
+    //   }
+    //     .other{
+    //     width: 90%;
+    //     &__image{
+    //       height: 200px;
+    //       width: 100%;
+    //       margin: 10px;
+    //       img{
+    //         height: 100%;
+    //         width: 100%;
             
-          }
-        }
-      }
-    }
-  }
+    //       }
+    //     }
+    //   }
+    // }
 }
