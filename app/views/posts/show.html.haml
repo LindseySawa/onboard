@@ -1,61 +1,18 @@
 = render "shared/header"
 
-.ownposts
-  .ownposts__username
+.posts
+  .posts__username
     =link_to user_path(@user) do
       =insert_name(@post.user.username)
     -# = @post.user.username
     %span さんの投稿
-  .ownposts__main
-    .ownposts__main--top
-      .country
-        %p 国名
-        %span :
-        .text
-          = @post.country
-      .city
-        %p 都市名
-        %span :
-        .text
-          = @post.city
-      .how
-        %p 撮影方法
-        %span :
-        .text
-          = @post.how
-    .ownposts__main--middle
-      =image_tag @post.image.url
-    .ownposts__main--bottom
-      = @post.discription
+  .posts__main
+    = render "shared/posts__mainparts"
+  
+  .posts__other
+    = render "shared/other__posts"
 
-    -# .ownpost
-    -#   .ownpost-one
-    -#     .left
-    -#       =image_tag @post.image.url
-
-    -#     .right
-    -#       .right__top
-    -#         .title
-    -#           %p
-    -#             = @post.title
-    -#       .right__details
-    -#         .country
-    -#           %p 国名
-    -#           %span :
-    -#           -# = Country.find(@post.country_id)&.name
-    -#           -# = @post.country
-    -#         .city
-    -#           %p 都市名
-    -#           %span :
-    -#           = @post.city
-    -#         .how
-    -#           %p 撮影方法
-    -#           %span :
-    -#           = @post.how
-
-    -#       .right__discription
-    -#         = @post.discription
-
+    
     -#       -if @post.user.id == current_user.id
     -#         -# .right__button
     -#         .right__edit
@@ -88,35 +45,9 @@
       -#               -#   = insert_name(@comments.user.username)
       -#             .comments-box__comment
       -#               = c.content
-      -# = render "shared/comments"
+
+    -# = render "shared/comments"
     
     // その他の投稿は一時的にコメントアウト
-
-    -# -if @post.user.id != current_user.id
-    -#   .other-posts
-    -#     =link_to user_path(@user) do
-    -#       =insert_name(@post.user.username)
-    -#     -# = @post.user.username
-    -#     %span さん
-    -#     %br
-    -#     %span その他の投稿
-    -#     .other
-    -#       -@posts.each do |f|
-    -#         .other__image
-    -#           = link_to post_path(f.id) do
-    -#             = image_tag(f.image.url)
-    -# -else
-    -#   .other-posts
-    -#     =link_to user_path(@user) do
-    -#       =insert_name(@post.user.username)
-    -#     -# = @post.user.username
-    -#     %span さん
-    -#     %br
-    -#     %span#notmine その他の投稿
-    -#     .other
-    -#       -@posts.each do |f|
-    -#         .other__image
-    -#           = link_to post_path(f.id) do
-    -#             = image_tag(f.image.url)
 
 -# = render "shared/footer"
