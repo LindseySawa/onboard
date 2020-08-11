@@ -6,22 +6,23 @@
     -# %span さん
     -# %br
     %span その他の投稿
-    .posts__other--slick__slide
+    %ul.posts__other--slick__slide
       -@posts.each do |f|
         -# .other__image
+        %li
+          = link_to post_path(f.id) do
+            = image_tag(f.image.url)
+-else
+  .posts__other__others
+    %span#notmine その他の投稿
+  %ul.other
+    -@others.each do |f|
+      %li.other__image
         = link_to post_path(f.id) do
           = image_tag(f.image.url)
--else
-  .other-posts
+
   -#   =link_to user_path(@user) do
   -#     =insert_name(@post.user.username)
   -#   -# = @post.user.username
   -#   %span さん
   -#   %br
-    %span#notmine その他の投稿
-    -# .other
-    -#   -@posts.each do |f|
-    -#     .other__image
-    -#       = link_to post_path(f.id) do
-    -#         = image_tag(f.image.url)
-

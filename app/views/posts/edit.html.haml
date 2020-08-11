@@ -3,33 +3,31 @@
 .edit
   .edit_main
     = form_for(@post, url: post_path, method: :patch) do |f|
-      .main
-        .main__left
-          .file
-          = f.label :image, for: "upload-image", class: "image-preview" do
-            = icon('fa', 'camera')
-            = f.file_field :image, class: "hidden", id: "upload-image"
-            %br
-        .main__right
-          .field
-            = f.label :タイトル
-            = f.text_field :title
-            %br
-          .field
-            = f.label :国名
-            = f.text_field :country
-            %br
-          .field
-            = f.label :都市名
-            = f.text_field :city
-            %br
-          .field
-            = f.label :撮影方法
-            = f.text_field :how
-            %br
-          .discription
-            = f.label :概要
-            = f.text_area :discription, placeholder: '写真について&#13;&#10;&#13;&#10;【例】&#13;&#10;いつ頃撮影したのか？&#13;&#10;そこまでのアクセス方法は？&#13;&#10;ここの近くに〇〇という美味しいお店があった！などのプチ情報も！'.html_safe
+      .preview
+        = f.label :image, for: "upload-image", class: "image-preview" do
+          = icon('fa', 'camera')
+          = f.file_field :image, class: "hidden", id: "upload-image"
+        %br
+        -# .main__right
+      .field
+        = f.label :タイトル
+        = f.text_field :title
+        %br
+      .field
+        = f.label :国名
+        = f.text_field :country
+        %br
+      .field
+        = f.label :都市名
+        = f.text_field :city
+        %br
+      .field
+        = f.label :撮影方法
+        = f.text_field :how
+        %br
+      .discription
+        = f.label :概要
+        = f.text_area :discription, placeholder: '写真について&#13;&#10;&#13;&#10;【例】&#13;&#10;いつ頃撮影したのか？&#13;&#10;そこまでのアクセス方法は？&#13;&#10;ここの近くに〇〇という美味しいお店があった！などのプチ情報も！'.html_safe
       .bottom
         .submit
-          = f.submit "UPDATE"
+          = f.submit "更新"

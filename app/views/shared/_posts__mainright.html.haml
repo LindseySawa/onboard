@@ -12,7 +12,35 @@
     %p よく撮影する被写体
     .answer
       = @user.fav_pic
-  .country
+  .countries
     %p 好きな旅行先
     .answer
       = @user.fav_country
+      
+.posts__main--right__details
+  .country
+    %p 国：
+    .text
+      = @post.country
+  .city
+    %p 都市：
+    .text
+      = @post.city
+  .how
+    %p 撮影方法：
+    .text
+      = @post.how
+
+-if @post.user.id == current_user.id
+  .posts__main--right__choice
+    = link_to "この投稿を編集する", edit_post_path(@post), method: :get, class: "edit-button"
+    %br/
+    %br/
+    = link_to "この投稿を削除する", post_path(@post), method: :delete, class: "delete-button"
+
+-else
+  .posts__main--right__like
+    %p この投稿が気に入ったら
+    %p ♡を押してね
+    %br/
+    = render "likes/like", locals: { post: @post, posts: @posts, likes: @likes, like: @like }

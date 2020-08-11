@@ -9,4 +9,6 @@ $(function () {
     variableWidth: true,
     dots: true,
   });
+
 });
+

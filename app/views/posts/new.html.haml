@@ -5,101 +5,43 @@
   -#   %p こんな風に書いてね
   -#   %p 詳細を詳しく書くと検索で探しやすくなるよ！
   .new-main
-    %p こんな風に書いてね!詳細を詳しく書くと検索で探しやすくなるよ！
+    -# %p こんな風に書いてね!詳細を詳しく書くと検索で探しやすくなるよ！
 
     .main
-      -# .main__left
-      -#   %span 記入例
-      -#   =image_tag "IMG_star.jpg", height: "200px", width: "200px"
-      -#   %table
-      -#     -# %tr
-      -#     -#   %td
-      -#     %tr
-      -#       %td タイトル
-      -#       %td.text ハリウッド通り
-      -#     %tr
-      -#       %td 国名
-      -#       %td.text アメリカ
-      -#     %tr
-      -#       %td 都市名
-      -#       %td.text ロサンゼルス
-      -#     %tr
-      -#       %td 撮影方法
-      -#       %td.text 一眼レフ
-      -#     %tr
-      -#       %td 詳細
-      -#       %td.text アカデミー賞があるシアター・手形のあるウォークオブフェイムウォークオブフェイムはやはり本物がすごい！
-          -# %tr
-          -#   %td
-          -#   %td.text 手形があるウォークオブフェイム
-          -# %tr
-          -#   %td
-          -#   %td.text やはり本物はすごい！
-        -# %span タイトル：ハリウッド通り
-        -# -# %br/
-        -# -# %span 【例】ハリウッド通り
-        -# %p
-        -# %span 国名：アメリカ
-        -# -# %br/
-        -# -# %span 【例】アメリカ
-        -# %p
-        -# %span 都市名：ロサンゼルス
-        -# -# %br/
-        -# -# %span 【例】ロサンゼルス
-        -# %p
-        -# %span 撮影方法：一眼レフ
-        -# -# %br/
-        -# -# %span 【例】一眼レフ
-        -# %p
-        -# %span 詳細：
-        -# %p 
-        -# %span アカデミー賞が行われているドルビーシアター
-        -# %p
-        -# %span スケールが大きくて違う世界でした！
-
-
-
-
-        -# = f.label :image, for: "upload-image", class: "image-preview" do
-        -#   = icon('fa', 'camera')
-        -#   = f.file_field :image, class: "hidden", id: "upload-image"
-          -# = f.hidden_field :image_cache
-          -# = f.label :image
-          -# %br
-      .main__right
-        = form_for(@post, url: posts_path) do |f|
-          .preview
-            = f.label :image, for: "upload-image", class: "image-preview" do
-              = icon('fa', 'camera')
-              = f.file_field :image, class: "hidden", id: "upload-image"
-              -# = f.hidden_field :image_cache
-              -# = f.label :image
+      -# .main__right
+      = form_for(@post, url: posts_path) do |f|
+        .preview
+          = f.label :image, for: "upload-image", class: "image-preview" do
+            = icon('fa', 'camera')
+            = f.file_field :image, class: "hidden", id: "upload-image"
+            -# = f.hidden_field :image_cache
+            -# = f.label :image
+        %br
+        .field
+          = f.label :タイトル
+          = f.text_field :title, placeholder: "必須"
           %br
-          .field
-            = f.label :タイトル
-            = f.text_field :title, placeholder: "必須"
-            %br
 
-          .field
-            = f.label :国名
-            -# = f.grouped_collection_select :country_id, Area.all, :countries, :name, :id, :name, include_blank: true
-            = f.text_field :country, placeholder: "必須"
-            -# %span  ※国名はバーの中から選択
-            %br
-          .field
-            = f.label :都市名
-            = f.text_field :city, placeholder: "/"
-            %br
-          .field
-            = f.label :撮影方法
-            = f.text_field :how, placeholder: "/"
-            %br
-          .discription
-            = f.label :概要
-            = f.text_area :discription, maxlength: "250", placeholder: '写真について&#13;&#10;&#13;&#10;【例】&#13;&#10;いつ頃撮影したのか？&#13;&#10;そこまでのアクセス方法は？&#13;&#10;近くに〇〇という美味しいお店があった！などのプチ情報も！'.html_safe
-          .bottom
-            .submit
-              = f.submit "投稿"
+        .field
+          = f.label :国
+          -# = f.grouped_collection_select :country_id, Area.all, :countries, :name, :id, :name, include_blank: true
+          = f.text_field :country, placeholder: "必須"
+          -# %span  ※国名はバーの中から選択
+          %br
+        .field
+          = f.label :都市
+          = f.text_field :city, placeholder: "/"
+          %br
+        .field
+          = f.label :撮影方法
+          = f.text_field :how, placeholder: "/"
+          %br
+        .discription
+          = f.label :概要
+          = f.text_area :discription, maxlength: "250", placeholder: '写真について&#13;&#10;&#13;&#10;【例】&#13;&#10;いつ頃撮影したのか？&#13;&#10;そこまでのアクセス方法は？&#13;&#10;近くに〇〇という美味しいお店があった！などのプチ情報も！'.html_safe
+        .bottom
+          .submit
+            = f.submit "投稿"
 
 -# = render "shared/footer"
 
