@@ -1,7 +1,7 @@
 .posts{
   margin: 30px 270px 30px 300px;
   &__username{
-    width: 100%;  
+    width: 100%;
     height: 30px;
     font-size: 25px;
     margin: 5px;
@@ -90,10 +90,6 @@
           }
         }
       }
-
-    }
-  }
-
       &__details{
         text-align: center;
         margin: 10px 10px 20px 10px;
@@ -152,7 +148,6 @@
   }
   &__other{
     height: 150px;
-
     width: 80%;
     margin: 0 auto;
     &--slick{
