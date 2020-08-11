@@ -1,0 +1,48 @@
+.posts__main--left__top
+  -# .country
+  -#   %p 国
+  -#   %span :
+  -#   .text
+  -#     = @post.country
+  -# .city
+  -#   %p 都市
+  -#   %span :
+  -#   .text
+  -#     = @post.city
+  -# .how
+  -#   %p 撮影方法
+  -#   %span :
+  -#   .text
+  -#     = @post.how
+.posts__main--left__middle
+  =image_tag @post.image.url
+.posts__main--left__bottom
+  = @post.discription
+
+-# .ownpost
+-#   .ownpost-one
+-#     .left
+-#       =image_tag @post.image.url
+
+-#     .right
+-#       .right__top
+-#         .title
+-#           %p
+-#             = @post.title
+-#       .right__details
+-#         .country
+-#           %p 国名
+-#           %span :
+-#           -# = Country.find(@post.country_id)&.name
+-#           -# = @post.country
+-#         .city
+-#           %p 都市名
+-#           %span :
+-#           = @post.city
+-#         .how
+-#           %p 撮影方法
+-#           %span :
+-#           = @post.how
+
+-#       .right__discription
+-#         = @post.discription

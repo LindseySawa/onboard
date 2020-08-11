@@ -1,33 +1,22 @@
 .wrap-signup{
   background-color: #FAFAFA;
-  height: 100%;
   .signup{
     margin: 0 250px;
     padding-top: 50px;
     .signup-top{ 
-      display: flex;
       width: 100%;
       height: 40px;
-      h2, p ,.link{
-        width: 33%;
-        line-height: 40px;
-      }
       h2{
         font-size: 25px;
       }
-      p{
-        text-align: right;
-      }
     }
     .signup-main{
-      font-family: "Gill Sans", sans-serif;
-      form{
-        width: 100%;
+      padding: 15px;
+      &__top{
         display: flex;
-        flex-wrap: wrap;
-        .signup__left{
-          width: 50%;
+        &--left{
           padding: 15px;
+          width: 45%;
           .field{
             label{
               font-size: 15px;
@@ -48,9 +37,10 @@
             }
           }
         }
-        .signup__right{
-          width: 40%;
+        &--right{
           padding: 15px;
+          width: 45%;
+          margin-left: auto;
           .field{
             label{
               font-size: 15px;
@@ -75,26 +65,34 @@
             }
           }
         }
-        .actions{
-          margin: 20px auto;
-          text-align: center;
-          input{
-            font-size: 20px;
-            background-color: #3d3d5c;
-            color: white;
-            outline: none;
-            padding: 5px;
-            border: none;
-            font-family: "M PLUS 1p";
-          }
-          .link{
-            margin-top: 20px;
-            a{
-              color: #3d3d5c;
-              font-size: 15px;
-              text-decoration: none;
-  
-            }
+      }
+      &__bottom{
+        width: 50%;
+        margin: 0 auto;
+        textarea{
+          width: 100%;
+          height: 150px;
+        }
+      }
+      .actions{
+        margin: 50px auto;
+        text-align: center;
+        input{
+          font-size: 20px;
+          background-color: #3d3d5c;
+          color: white;
+          outline: none;
+          padding: 5px;
+          border: none;
+          font-family: "M PLUS 1p";
+        }
+        .link{
+          margin-top: 20px;
+          a{
+            color: #3d3d5c;
+            font-size: 15px;
+            text-decoration: none;
+
           }
         }
       }
