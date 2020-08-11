@@ -114,26 +114,20 @@
           }
         }
       }
-      .comment{
-        margin-top: 50px;
-        .comments{
-          width: 60%;
-          margin: 0 auto;
-          border: #e6e6e6 1px solid;
-          border-radius: 10px;
-          p{
-            background-color: #e6e6e6;
-            font-size: 18px;
-            padding: 10px;
-          }
-          .comments-box{
-            // border-top: #e6e6e6 1px dotted;
-            padding: 10px 10px 10px 20px;
-            &__name{
-              color: black;
-              font-size: 15px;
-            }
-            &__comment{
+    }
+  }
+  &__other{
+    height: 200px;
+    width: 80%;
+    margin: 0 auto;
+    &--slick{
+      ul.posts__other--slick__slide{
+        display: flex;
+        li{
+          list-style: none;
+          width: 20%;
+          a{
+            img{
               width: 90%;
               margin: 5px auto;
               font-size: 11px;
@@ -142,13 +136,14 @@
           }
         }
       }
-      .comment-form{
-        width: 60%;
-        margin: 20px auto;
-        form{
-          padding: 10px;
-          text-align: center;
-          textarea{
+    }
+    ul.other{
+      display: flex;
+      li.other__image{
+        list-style: none;
+        width: 20%;
+        a{
+          img{
             width: 90%;
             height: 100px;
             border: lightgray 1px solid;

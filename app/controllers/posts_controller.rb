@@ -20,8 +20,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @posts = Post.where(user_id: @post.user_id).order("RAND()").limit(6)
-    @others = Post.where.not(user_id: @post.user_id).order("RAND()").limit(6)
+    @posts = Post.where(user_id: @post.user_id).order("RAND()").limit(5)
+    @others = Post.where.not(user_id: @post.user_id).order("RAND()").limit(5)
     # @comments = @post.comments.includes(:user)
     # @comment = Comment.new
     @comments = @post.comments
