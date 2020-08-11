@@ -1,6 +1,6 @@
 .new{
-  margin: 0 170px 0 170px;
-  height: 100%;
+  // margin: 0 170px 0 170px;
+  // height: 100%;
   .new-main{
     height: 100px;
     p{
@@ -9,135 +9,76 @@
       margin: 50px 0;
     }
     .main{
-      padding: 10px;
-      display: flex;
-      // &__left{
-      //   width: 30%;
-      //   height: 400px;
-      //   text-align: center;
-      //   padding: 30px;
-      //   background-color: white;
-      //   border: lightgray 1px solid;
-      //   font-size: 13px;
-      //   table{
-      //     margin: 20px 0;
-      //     tr{
-      //       height: 25px;
-      //       td{
-      //         width: 25%;
-
-      //       }
-      //       td.text{
-      //         width: 65%;
-      //       }
-      //     }
-      //   }
-
-        // p{
-        //   height: 15px;
-        //   margin: 0;
-        //   font-size: 10px;
-        // }
-  
-      //   label{
-      //     i{
-      //       font-size: 200px;
-      //     }
-      //     i:hover{
-      //       cursor: pointer;
-      //       transform: scale(1.1, 1.1);
-      //     }
-      //     input{
-      //       font-family: "M PLUS 1p";
-
-      //     }
-      //   }
-      //   img{
-      //     margin: 0 auto;
-      //   }
-      // }
-      &__right{
-        width: 50%;
-        padding: 15px;
-        background-color: white;
-        // border: lightgray 1px solid;
-        // margin-left: auto;
-        margin: 0 auto;
-        form{
-          .preview{
-            text-align: center;
-            label{
-              i{
-                font-size: 150px;
-                margin: 30px auto;
-              }
-              input{
-                display: none;
-              }
+      width: 40%;
+      margin: 0 auto;
+      form{
+        .preview{
+          text-align: center;
+          label{
+            i{
+              font-size: 150px;
+              margin: 30px auto;
+            }
+            input{
+              display: none;
             }
           }
         }
+      }
 
-        input, textarea{
-        outline: none;
-        margin: 15px;
-        font-size: 13px;
-        padding: 3px;
-        font-family: "M PLUS 1p";
+      input, textarea{
+      outline: none;
+      margin: 15px;
+      font-size: 13px;
+      padding: 3px;
+      font-family: "M PLUS 1p";
+      }
+      input{
+        height: 20px;
+        padding-left: 10px;
+        width: 70%;
+      }
+      .discription{
+        text-align: right;
+        display: flex;
+        label{
+          line-height: 100px;
+          width: 25%;
+          text-align: center;
         }
-        input{
-          height: 20px;
-          padding-left: 10px;
+        textarea{
+          height: 180px;
+          border: gray 1px solid;
+          padding: 10px;
           width: 70%;
+          margin: 20px 15px;
+          justify-content: center;
+          border-radius: 5px;
         }
-        .discription{
-          text-align: right;
-          display: flex;
-          label{
-            line-height: 100px;
-            width: 25%;
-            text-align: center;
-          }
-          textarea{
-            height: 200px;
-            border: gray 1px solid;
-            padding: 10px;
-            width: 70%;
-            margin: 20px 15px;
-            justify-content: center;
-            border-radius: 5px;
-          }
-        }
-        span{
-          font-size: 5px;
-          float: right;
-        }
-        .field{
-          display: flex;
-          label{
-            line-height: 60px;
-            width: 25%;
-            text-align: center;
-          }
+      }
+      .field{
+        display: flex;
+        label{
+          line-height: 60px;
+          width: 25%;
+          text-align: center;
         }
       }
     }
-    .bottom{
-      .submit{
-        text-align: center;
-        input{
-          background-color:#3d3d5c;
-          color: white;
-          font-size: 20px;
-          text-decoration: none;
-          margin: 20px;
-          height: 50px;
-          width: 100px;
-          font-family: "M PLUS 1p";
-          padding: 0;
-
-  
-        }
+  }
+  .bottom{
+    .submit{
+      text-align: center;
+      input{
+        background-color:#3d3d5c;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        margin: 20px;
+        height: 50px;
+        width: 100px;
+        font-family: "M PLUS 1p";
+        padding: 0;
       }
     }
   }

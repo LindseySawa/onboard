@@ -1,76 +1,74 @@
 .edit{
-  margin: 50px 200px;
+  // margin: 50px 200px;
   .edit_main{
-    width: 80%;
+    width: 40%;
     margin: 0 auto;
-    .main{
-      background-color: white;
-      border: lightgray 1px solid;
-      padding: 10px;
-      display: flex;
-      &__left{
-        width: 40%;
-        height: 250px;
+    form{
+      .preview{
         text-align: center;
-        padding: 30px;
-        margin: auto;
         label{
           i{
-            font-size: 200px;
+            font-size: 150px;
+            margin: 30px auto;
           }
-          i:hover{
-            cursor: pointer;
-            transform: scale(1.1, 1.1);
-          }
-        }
-        img{
-          margin: 0 auto;
-        }
-
-      }
-      &__right{
-        width: 60%;
-        padding: 15px;
-        input, textarea{
-          outline: none;
-          margin: 5px;
-          font-size: 13px;
-          padding: 3px;
-          }
-        input{
-          height: 20px;
-          padding-left: 10px;
-          width: 70%;
-        }
-        textarea{
-          height: 130px;
-          border: lightgray 1px solid;
-          padding: 10px;
-          width: 90%;
-        }
-        .field{
-          display: flex;
-          label{
-            line-height: 40px;
-            width: 25%;
+          input{
+            display: none;
           }
         }
       }
     }
-    .bottom{
-      .submit{
-        text-align: center;
-        input{
-          background-color:#3d3d5c;
-          color: white;
-          font-size: 30px;
-          text-decoration: none;
-          margin: 20px;
-          height: 50px;
-          width: 250px;
-          line-height: 50px;
-  
+    input, textarea{
+      outline: none;
+      margin: 15px;
+      font-size: 13px;
+      padding: 3px;
+      font-family: "M PLUS 1p";
+      }
+      input{
+        height: 20px;
+        padding-left: 10px;
+        width: 70%;
+      }
+      .discription{
+        text-align: right;
+        display: flex;
+        label{
+          line-height: 100px;
+          width: 25%;
+          text-align: center;
         }
+        textarea{
+          height: 180px;
+          border: gray 1px solid;
+          padding: 10px;
+          width: 70%;
+          margin: 20px 15px;
+          justify-content: center;
+          border-radius: 5px;
+        }
+      }
+      .field{
+        display: flex;
+        label{
+          line-height: 60px;
+          width: 25%;
+          text-align: center;
+        }
+      }
+    }
+  .bottom{
+    .submit{
+      text-align: center;
+      input{
+        background-color:#3d3d5c;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        margin: 20px;
+        height: 50px;
+        width: 100px;
+        font-family: "M PLUS 1p";
+        padding: 0;
       }
     }
   }
