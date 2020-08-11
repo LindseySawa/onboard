@@ -1,21 +1,21 @@
 -if @comments.any?
-  .comment
-    .comments
-      %p
-        = icon('far','comment-dots')
-        %span コメント
-      -@comments.each do |c|
-        -# -if @comments.blank?
-        .comments-box
-          .comments-box__name
-            = c.user.username unless c.user.blank?
-            -# =link_to user_path(@user) do
-            -#   = insert_name(@comments.user.username)
-          .comments-box__comment
-            = c.content
+  .posts__comments--top
+    -# .posts__comments--top__title
+    %p
+      = icon('far','comment-dots')
+      %span コメント
+    -@comments.each do |c|
+      -# -if @comments.blank?
+      .posts__comments--top__box
+        .name
+          = c.user.username unless c.user.blank?
+          -# =link_to user_path(@user) do
+          -#   = insert_name(@comments.user.username)
+        .comment
+          = c.content
 
   -if @post.user_id != current_user.id
-    .comment-form
+    .posts__comments--bottom
       = form_for [@post, @comment] do |f|
         = f.hidden_field :post_id, value: @post.id
         = f.text_area :content

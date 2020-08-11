@@ -63,7 +63,7 @@
       margin-left: auto;
       margin-top: 50px;
       &__intro{
-        padding: 15px;
+        padding: 20px;
         height: 100%;
         .name{
           height: 20%;
@@ -71,6 +71,7 @@
             text-decoration: none;
             font-size: 20px;
             color: black;
+            float: right;
           }
           span{
             font-size: 10px;
@@ -81,13 +82,28 @@
           p{
             font-size: 10px;
           }
+          .answer{
+            float: right;
+          }
         }
       }
     }
   }
   &__other{
-    height: 100px;
-    width: 50%;
+    height: 200px;
+    width: 100%;
+    &--slick{
+      &__slide{
+        a{
+          img{
+            width: 15%;
+            height: 15%;
+          }
+        }
+
+      }
+    }
+    
   }
     // .ownpost{
     //   width: 100%;
@@ -186,9 +202,8 @@
     //         }
     //       }
     //     }
-      .comment{
-        margin-top: 50px;
-        .comments{
+      &__comments{
+        &--top{
           width: 50%;
           margin: 0 auto;
           border: #e6e6e6 1px solid;
@@ -201,49 +216,50 @@
           span{
             font-size: 15px;
           }
-          .comments-box{
+          &__box{
             // border-top: #e6e6e6 1px dotted;
             padding: 10px 10px 10px 20px;
-            &__name{
+            .name{
               color: black;
               font-size: 15px;
             }
-            &__comment{
+            .comment{
               width: 90%;
               margin: 5px auto;
               font-size: 11px;
             }
           }
         }
-      }
-      .comment-form{
-        width: 60%;
-        margin: 20px auto;
-        form{
-          padding: 10px;
-          text-align: center;
-          textarea{
-            width: 70%;
-            height: 100px;
-            border: lightgray 1px solid;
-            outline: none;
-            border-radius: 20px;
-            padding: 5px;
-          }
-          .comment-submit{
-            width: 25%;
+        &--bottom{
+          width: 60%;
+          margin: 20px auto;
+          form{
+            padding: 10px;
             text-align: center;
-            background-color: #e6e6e6;
-            color: #514D4D;
-            height: 33px;
-            font-size: 15px;
-            text-decoration: none;
-            border: none;
-            font-family: "M PLUS 1p";
+            textarea{
+              width: 70%;
+              height: 100px;
+              border: lightgray 1px solid;
+              outline: none;
+              border-radius: 20px;
+              padding: 5px;
+            }
+            .comment-submit{
+              width: 25%;
+              text-align: center;
+              background-color: #e6e6e6;
+              color: #514D4D;
+              height: 33px;
+              font-size: 15px;
+              text-decoration: none;
+              border: none;
+              font-family: "M PLUS 1p";
 
+            }
           }
         }
       }
+
     // }
     // .other-posts{
     //   width: 15%;
