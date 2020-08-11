@@ -1,0 +1,13 @@
+.posts__main--right__intro
+  .name
+    =link_to user_path(@user) do
+      =insert_name(@post.user.username)
+    %span さんの投稿
+  .info
+    %p よく使用する撮影機器
+    %p iPhone
+  .pic
+    %p よく撮影する被写体
+
+  .country
+    %p 好きな旅行先

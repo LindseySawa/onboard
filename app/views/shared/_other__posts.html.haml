@@ -1,10 +1,10 @@
 -if @post.user.id != current_user.id
   .other-posts
-    =link_to user_path(@user) do
-      =insert_name(@post.user.username)
+    -# =link_to user_path(@user) do
+    -#   =insert_name(@post.user.username)
     -# = @post.user.username
-    %span さん
-    %br
+    -# %span さん
+    -# %br
     %span その他の投稿
     -# .other
       -# -@posts.each do |f|
@@ -13,11 +13,11 @@
       -#       = image_tag(f.image.url)
 -else
   .other-posts
-    =link_to user_path(@user) do
-      =insert_name(@post.user.username)
-    -# = @post.user.username
-    %span さん
-    %br
+  -#   =link_to user_path(@user) do
+  -#     =insert_name(@post.user.username)
+  -#   -# = @post.user.username
+  -#   %span さん
+  -#   %br
     %span#notmine その他の投稿
     -# .other
     -#   -@posts.each do |f|

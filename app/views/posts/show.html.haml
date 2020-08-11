@@ -7,12 +7,15 @@
     -# = @post.user.username
     %span さんの投稿
   .posts__main
-    = render "shared/posts__mainparts"
+    .posts__main--left
+      = render "shared/posts__mainleft"
+    .posts__main--right
+      = render "shared/posts__mainright"
   
   .posts__other
     = render "shared/other__posts"
 
-    
+
     -#       -if @post.user.id == current_user.id
     -#         -# .right__button
     -#         .right__edit
