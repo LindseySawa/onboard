@@ -4,9 +4,12 @@
   .edit_main
     = form_for(@post, url: post_path, method: :patch) do |f|
       .preview
-        = f.label :image, for: "upload-image", class: "image-preview" do
-          = icon('fa', 'camera')
-          = f.file_field :image, class: "hidden", id: "upload-image"
+        -# = f.label :image
+        = image_tag @post.image.url
+        -# = f.file_field @post.image.url
+        -# = f.label :image, for: "upload-image", class: "image-preview" do
+        -#   = icon('fa', 'camera')
+        -#   = f.file_field :image, class: "hidden", id: "upload-image"
         %br
         -# .main__right
       .field

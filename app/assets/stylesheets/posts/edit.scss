@@ -2,10 +2,14 @@
   // margin: 50px 200px;
   .edit_main{
     width: 40%;
-    margin: 0 auto;
+    margin: 30px auto;
     form{
       .preview{
         text-align: center;
+        img{
+          width: 250px;
+          height: 250px;
+        }
         label{
           i{
             font-size: 150px;
