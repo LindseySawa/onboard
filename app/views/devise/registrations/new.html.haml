@@ -65,6 +65,13 @@
 
         .signup-main__bottom
           .field
+            = f.label :アイコン
+            %br/
+            %br/
+            = icon('fa','user-circle')
+            %br/
+            = f.file_field :icon
+          .field
             = f.label :自己紹介
             %br/
             %br/
