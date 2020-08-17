@@ -13,5 +13,5 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, length: { minimum: 8 } #7文字以上
   validates :fav_country, presence: true
   validates :introduction, presence: true
+  mount_uploader :avatar, AvatarUploader
 end
- 
