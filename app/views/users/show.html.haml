@@ -3,7 +3,10 @@
 .myprofile
   .myprofile-detail
     .myprofile-detail__icon
-      = icon('fas', 'user-circle')
+      -# -if @user.avatar?
+      = image_tag @user.avatar.thumb.url
+      -# -else
+      -#   = icon('fas', 'user-circle')
     .myprofile-detail__info
       %table
         %tr
@@ -19,9 +22,9 @@
           %td
             = @user.fav_spot
         %tr
-          %th ホームページ：
-          %td
-            = @user.sns_hp
+          -# %th ホームページ：
+          -# %td
+          -#   = @user.sns_hp
         %tr.introduction
           %th.introduction 自己紹介：
           %td.introduction
