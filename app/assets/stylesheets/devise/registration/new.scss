@@ -68,18 +68,19 @@
       }
       &__bottom{
         width: 100%;
-        // margin: 0 auto;
         display: flex;
         .field{
           width: 50%;
           text-align: center;
+          p{
+            margin-bottom: 20px;
+          }
           textarea{
             height: 150px;
             width: 80%;
           }
           i{
             font-size: 100px;
-            padding-top: 20px
           }
           input{
             padding-top: 30px;
