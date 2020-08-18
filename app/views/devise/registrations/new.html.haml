@@ -65,12 +65,10 @@
 
         .signup-main__bottom
           .field
-            = f.label :アイコン
-            %br/
-            %br/
-            = icon('fa','camera-retro')
-            %br/
-            = f.file_field :avatar, class: "avatar-preview"
+            %p アイコン
+            = f.label :avatar, class: "avatar-icon" do
+              = icon('fa','camera-retro')
+              = f.file_field :avatar, class: "avatar-preview"
           .field
             = f.label :自己紹介
             %br/
