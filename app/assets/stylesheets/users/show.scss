@@ -1,5 +1,6 @@
 .myprofile{
   margin: 30px 200px;
+  height: 100%;
 
   .myprofile-detail{
     display: flex;
@@ -8,7 +9,9 @@
     &__icon{
       width: 200px;
       text-align: center;
-
+      // img{
+      //   border-radius: 50%;
+      // }
       i{
         font-size: 100px;
         line-height: 200px;
@@ -16,10 +19,10 @@
       }
     }
     &__info{
-      width: 500px;
+      width: 340px;
       padding: 30px;
-      height: auto;
-      overflow: hidden;
+      // height: auto;
+      // overflow: hidden;
       table{
         tr{
           th{

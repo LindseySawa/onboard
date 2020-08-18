@@ -3,9 +3,6 @@
   .signup
     .signup-top
       %h2 新規登録
-      -# .link
-      -#   = render "devise/shared/links"
-
     
     .signup-main
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
@@ -64,6 +61,15 @@
               .line
 
         .signup-main__bottom
+          .field
+            %p アイコン
+            .field-icon
+              = f.label :avatar, class: "icon" do
+                -if @user.avatar.url.present?
+                  =image_tag @user.avatar.url, alt: "avatar-preview", class: "avatar-preview"
+                -else
+                  = icon('fa','camera-retro')
+                = f.file_field :avatar, class: "avatar"
           .field
             = f.label :自己紹介
             %br/
