@@ -3,6 +3,7 @@ $(function () {
     var file = e.target.files[0],
       reader = new FileReader(),
       $preview = $(".field-icon");
+    $usericon = $(".field-icon i");
 
     if (file.type.indexOf("image") < 0) {
       return false; //一致するものがなければfalse
@@ -10,7 +11,7 @@ $(function () {
 
     reader.onload = (function (file) {
       return function (e) {
-        $preview.empty(); //空の状態にする
+        $usericon.remove(); //iconを消す
         $preview.append($('<img>').attr({ //属性をpreviewのimgに追加
           src: e.target.result, //取得した結果
           width: "150px",

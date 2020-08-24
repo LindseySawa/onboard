@@ -14,10 +14,12 @@
       form{
         .preview{
           text-align: center;
+          height: 250px;
           label{
             i{
               font-size: 150px;
               margin: 30px auto;
+              padding: 25px 0;
             }
             input{
               display: none;

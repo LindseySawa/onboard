@@ -16,6 +16,8 @@ class PostsController < ApplicationController
     @post = current_user.posts.create(post_params)
     @post.save
     redirect_to posts_path
+    # logger.debug @post.errors.inspect
+    
   end
 
   def show
@@ -77,6 +79,6 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:image, :title, :country, :city, :how, :discription, :like_count)
   end
-
+    # .merge(user_id: current_user.id)
   
 end
