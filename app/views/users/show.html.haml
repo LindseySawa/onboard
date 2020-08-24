@@ -3,10 +3,10 @@
 .myprofile
   .myprofile-detail
     .myprofile-detail__icon
-      -# -if @user.avatar?
-      = image_tag @user.avatar.thumb.url
-      -# -else
-      -#   = icon('fas', 'user-circle')
+      -if @user.avatar?
+        = image_tag @user.avatar.thumb.url
+      -else
+        = icon('fas', 'user-plus')
     .myprofile-detail__info
       %table
         %tr
