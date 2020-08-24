@@ -12,10 +12,10 @@
       = form_for(@post, url: posts_path) do |f|
         .preview
           = f.label :image, for: "upload-image", class: "image-preview" do
-            - if @post.image.url.present?
-              = image_tag @post.image.url, alt: "preview", class: "preview-image"
-            -else
-              = icon('fa', 'camera')
+            -# - if @post.image.url.present?
+            -#   = image_tag @post.image.url, alt: "preview", class: "preview-image"
+            -# -else
+            = icon('fa', 'camera')
             = f.file_field :image, class: "hidden", id: "upload-image"
             -# = f.hidden_field :image_cache
             -# = f.label :image

@@ -4,11 +4,14 @@ class AvatarUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  if Rails.env.development? || Rails.env.test?
-    storage :file
-  else
-    storage :fog
-  end
+  storage :file
+
+  # if Rails.env.development? || Rails.env.test?
+  #   storage :file
+  # else
+  #   storage :fog
+  # end
+  # storage :fog
 
   version :thumb do
     process :resize_to_limit => [200, 200]

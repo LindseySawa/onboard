@@ -65,10 +65,10 @@
             %p アイコン
             .field-icon
               = f.label :avatar, class: "icon" do
-                -if @user.avatar.url.present?
-                  =image_tag @user.avatar.url, alt: "avatar-preview", class: "avatar-preview"
-                -else
-                  = icon('fa','camera-retro')
+                -# -if @user.avatar.url.present?
+                -#   =image_tag @user.avatar.url, alt: "avatar-preview", class: "avatar-preview"
+                -# -else
+                = icon('fa','camera-retro')
                 = f.file_field :avatar, class: "avatar"
           .field
             = f.label :自己紹介
