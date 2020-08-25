@@ -12,13 +12,13 @@ class ImageUploader < CarrierWave::Uploader::Base
   process :auto
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  # storage :file
 
-  # if Rails.env.development? || Rails.env.test?
-  #   storage :file
-  # else
-  #   storage :fog
-  # end
+  if Rails.env.development? || Rails.env.test?
+    storage :file
+  else
+    storage :fog
+  end
   # storage :fog
 
 
