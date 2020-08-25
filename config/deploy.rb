@@ -42,6 +42,7 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 
+
   desc 'upload credentials.yml.enc'
   task :upload do
     on roles(:app) do |host|
@@ -54,3 +55,6 @@ namespace :deploy do
   before :starting, 'deploy:upload'
   after :finishing, 'deploy:cleanup'
 end
+
+
+
