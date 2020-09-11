@@ -1,36 +1,86 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
-= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    %div
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
-  .field
-    = f.label :password
-    %i (leave blank if you don't want to change it)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-    - if @minimum_password_length
-      %br/
-      %em
-        = @minimum_password_length
-        characters minimum
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .field
-    = f.label :current_password
-    %i (we need your current password to confirm your changes)
-    %br/
-    = f.password_field :current_password, autocomplete: "current-password"
-  .actions
-    = f.submit "Update"
-%h3 Cancel my account
-%p
-  Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-= link_to "Back", :back
+=render "shared/header"
+.wrap-edit
+  .edit
+    .edit-top
+      %h2 情報更新
+    
+    .edit-main
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .edit-main__top  
+          .edit-main__top--left
+            .field
+              = f.label :ユーザー名
+              %br/
+              = f.text_field :username, autofocus: true, autocomplete: "username"
+              .line
+            .field
+              = f.label :アドレス
+              %br/
+              = f.email_field :email, autofocus: true, autocomplete: "email"
+              .line
+            .field
+              = f.label :パスワード
+              - if @minimum_password_length
+                %em
+                  (#{@minimum_password_length} 文字以上)
+              %br/
+              = f.password_field :password, autocomplete: "new-password"
+              .line
+            .field
+              = f.label :パスワード確認用
+              %br/
+              = f.password_field :password_confirmation, autocomplete: "new-password"
+              .line
+
+          .edit-main__top--right
+            .field
+              = f.label :好きな旅行先
+              %br/
+              = f.text_field  :fav_country
+              .line
+            .field
+              = f.label :オススメスポット
+              %br/
+              = f.text_field :fav_spot
+              .line
+            -# .field
+            -#   = f.label :ホームページ
+            -#   %br/
+            -#   = f.url_field :sns_hp
+            -#   .line
+            .field
+              = f.label :よく撮影する被写体
+              %br/
+              = f.text_field :fav_pic, placeholder: "例：風景"
+              .line
+            .field
+              = f.label :よく使用する撮影機器
+              %br/
+              = f.text_field :fav_cam, placeholder: "例：Nikon"
+              .line
+
+        .edit-main__bottom
+          .field
+            %p アイコン
+            .field-icon
+              = f.label :avatar, class: "icon" do
+                = icon('fa','user-plus')
+                = f.file_field :avatar, class: "avatar"
+          .field
+            = f.label :自己紹介
+            %br/
+            %br/
+            = f.text_area  :introduction
+
+
+        .actions
+          = f.submit "更新"
+          .link
+            = render "devise/shared/links"
+
+    
+      -# %h3 アカウント削除をご希望の方はこちら
+      -# %p
+      -#   #{button_to "アカウント削除", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
+      -# = link_to "Back", :back
