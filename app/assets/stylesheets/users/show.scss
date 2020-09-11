@@ -27,9 +27,25 @@
           th{
             width: 40%;
           }
+          th.name{
+          font-size: 25px;
+          height: 60px;
+          width: 70%;
+          text-align: right;
+          }
+          
           td{
             font-weight: bold;
             text-align: center;
+          }
+          td.edit-button{
+            padding-top: 5px;
+
+            a{
+              text-decoration: none;
+              color: black;
+              font-size: 15px;
+            }
           }
         }
         tr.introduction{

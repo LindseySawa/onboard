@@ -10,9 +10,12 @@
     .myprofile-detail__info
       %table
         %tr
-          %th 名前：
-          %td
+          %th.name
             = @user.username
+
+          %td.edit-button
+            = link_to edit_user_registration_path(@post), method: :get, class: "profile-edit-button" do
+              = icon("fas", "pencil-alt")
         %tr
           %th 好きな旅行先：
           %td
