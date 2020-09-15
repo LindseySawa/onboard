@@ -35,27 +35,9 @@
       }
     }
 
-    // .popup{
-    //   width: 40%;
-    //   margin: 50px auto;
-    //   .icon{
-    //     width: 30%;
-    //   }
-    //   &__mail, &__cam, &__com{
-    //     display: flex;
-    //     &--message{
-    //       width: 60%;
-    //       // background-color: gray;
-    //       text-align: center;
-    //       padding: 10px 0;
-    //       box-sizing: border-box;
-  
-    //     }
-    //   }
-    // }
     .use{
       margin: 25px;
-      height: 250px;
+      height: 300px;
       display: flex;
       justify-content: center;
       
@@ -77,21 +59,30 @@
           height: 45%;
           background-color:lightgray;
           padding: 10px;
+          text-align: center;
+
           
-          p.top{
-            font-size: 17px;
-            font-weight: bold;
+          &__top{
+            margin-bottom: 15px;
+            p{
+              font-size: 17px;
+              font-weight: bold;
+            }
           }
 
-          p{
-            font-family: "M PLUS 1p";
-            text-align: center;
-          }
+          // p{
+          //   font-family: "M PLUS 1p";
+          //   text-align: center;
+          // }
         }
         &--leftmiddle{
           margin-right: 20px;
         }
       }
+    }
+
+    .use-mini{
+      display: none;
     }
     .ranking{
       width: 50%;
@@ -137,5 +128,37 @@
         padding: 10px 0;
       }
     }
+  }
+}
+
+//タブレット縦
+@media screen and (max-width: 1024px){
+  .use{
+    &__detail{
+      width: 20%!important;
+    }
+  }
+}
+
+//スマホ横
+@media screen and (max-width: 896px){
+  .use{
+    &__detail{
+      width: 30%!important;
+    }
+  }
+}
+
+//スマホたて
+@media screen and (max-width: 480px){
+  .use{
+    display: none!important;
+  }
+  .use-mini{
+    display: block!important;
+    table{
+      margin: 0 auto;
+    }
+
   }
 }
