@@ -1,6 +1,4 @@
 .new{
-  // margin: 0 170px 0 170px;
-  // height: 100%;
   .new-main{
     height: 100px;
     p{
@@ -83,5 +81,16 @@
         padding: 0;
       }
     }
+  }
+}
+
+@media screen and (max-width: 896px){
+  #main{
+    width: 65%;
+  }
+}
+@media screen and (max-width: 480px){
+  #main{
+    width: 80%;
   }
 }

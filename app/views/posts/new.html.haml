@@ -1,13 +1,8 @@
 = render "shared/header"
 
 .new
-  -# .new-example
-  -#   %p こんな風に書いてね
-  -#   %p 詳細を詳しく書くと検索で探しやすくなるよ！
   .new-main
-    -# %p こんな風に書いてね!詳細を詳しく書くと検索で探しやすくなるよ！
-
-    .main
+    .main#main
       -# .main__right
       = form_for(@post, url: posts_path) do |f|
         .preview
