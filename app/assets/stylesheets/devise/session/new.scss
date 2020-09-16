@@ -4,7 +4,7 @@
   .login{
     padding-top: 50px;
     margin: 0 auto;
-    width: 35%;
+    width: 40%;
     &__top{
       padding: 15px;
       h2{
@@ -56,6 +56,17 @@
             padding: 5px;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 896px){
+  .links{
+    .link{
+      a{
+        font-size: 10px!important;
+
       }
     }
   }

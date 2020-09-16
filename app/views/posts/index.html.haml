@@ -13,64 +13,58 @@
       %li.slider__one
         =image_tag "mainbox4.jpg", alt: "mainbox4", class: "banner"
     
-    .message__top
+    .message-top
       %p ~Every hundred feet the world changes~
       %span 100フィーとごとに世界は変わる
-
-    -# .popup
-    -#   .popup__mail
-    -#     =image_tag "email22.jpg", class: "icon"
-    -#     .popup__mail--message
-    -#       %p まずは登録しよう
-    -#       %p 登録をすると写真の詳細が見れるよ！
-    -#       %p 検索機能も使えるよ！
-
-    -#   .popup__cam
-    -#     .popup__cam--message
-    -#       %p 写真投稿しよう
-    -#       %p 写真詳細を書くと
-    -#       %p 検索で他の人が
-    -#       %p 探しやすくなるよ！
-
-    -#     =image_tag "cam22.jpg", class: "icon"
-
-    -#   .popup__com
-    -#     =image_tag "com22.jpg", class: "icon"
-    -#     .popup__com--message
-    -#       %p 検索しよう
-    -#       %p 検索して
-    -#       %p 次の旅行先を見つけよう！
 
     .use
       .use__detail.use__detail--leftmiddle
         .use__detail--image
           =image_tag "email22.jpg"
         .use__detail--exp
-          %p.top 登録をしよう!
-          %br/
-          %p 登録すると
-          %p 写真の詳細が見れるよ！
-          %p 検索機能も使える！
+          .use__detail--exp__top
+            %p 登録をしよう!
+          .use__detail--exp__bottom
+            %p 登録すると
+            %p 写真の詳細が見れるよ！
+            %p 検索機能も使える！
       .use__detail.use__detail--leftmiddle
         .use__detail--image
           =image_tag "cam22.jpg"
         .use__detail--exp
-          %p.top 写真を投稿しよう！
-          %br/
-          %p 写真詳細を書くと
-          %p 検索で他の人が
-          %p 探しやすくなるよ！
+          .use__detail--exp__top
+            %p 写真を投稿しよう！
+          .use__detail--exp__bottom
+            %p 写真詳細を書くと
+            %p 検索で他の人が
+            %p 探しやすくなるよ！
       .use__detail
         .use__detail--image
           =image_tag "com22.jpg"
         .use__detail--exp
-          %p.top 検索しよう！
-          %br/
-          %p 検索して
-          %p 次の旅行先を見つけよう！
+          .use__detail--exp__top
+            %p 検索しよう！
+          .use__detail--exp__bottom
+            %p 検索して
+            %p 次の旅行先を見つけよう！
 
-    .message__bottom
-      %p 今まであなたが知らなかった世界を探求！
+    .use-mini
+      %table
+        %tr
+          %th
+            =image_tag "email22.jpg"
+          %th 登録しよう！
+        %tr
+          %th
+            =image_tag "cam22.jpg"
+          %th 写真を投稿しよう！
+        %tr
+          %th
+            =image_tag "com22.jpg"
+          %th 検索しよう！
+
+    .message-bottom
+      %p#top 今まであなたが知らなかった世界を探求！
       %span 観光スポットからローカルな場所までみんなで投稿
       
     .ranking

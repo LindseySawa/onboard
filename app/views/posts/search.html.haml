@@ -3,15 +3,16 @@
 
 .search-main
   .search-top
-    =form_tag('/posts/search', method: :get, placeholder:"") do
+    =form_tag('/posts/search', method: :get, placeholder:"", id: "search-form") do
       -# .search__box
       = label_tag "SEARCH"
       = text_field_tag :keyword, :'', placeholder: " 検索したい国や気になるキーワードを入力", class: "search-input"
-    %p ※検索前は最新投稿が表示されます！
+    -# %p ※検索前は最新投稿が表示されます！
   .search-bottom
+    %p ※検索前は最新投稿が表示されます※
     .search-result
       -@posts.each do |p|
-        .search-result__each     
+        .search-result__each#each   
           = link_to post_path(p.id), alt: "#{p.title}<br/>#{p.country}" do
             = image_tag(p.image.url)
 
