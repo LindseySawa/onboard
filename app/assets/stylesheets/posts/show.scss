@@ -1,5 +1,6 @@
 .posts{
-  margin: 30px 270px 30px 300px;
+  width: 60%;
+  margin: 30px auto;
   &__username{
     width: 100%;
     height: 30px;
@@ -18,31 +19,15 @@
     display: flex;
     &--left{
       width: 60%;
+      // &__top{
+      //   height: 50px;
+      //   // display: flex;
+      // }
       &__top{
-        height: 50px;
-        display: flex;
-        // .country, .city, .how{
-        //   // display: flex;
-        //   line-height: 50px;
-        //   width: 33%;
-        //   padding-left: 10px;
-        //   p{
-        //     font-size: 20px;
-        //   }
-        //   span{
-        //     padding: 0 5px;
-        //   }
-        //   .text{
-        //     display: block;
-        //     margin-left: auto;
-        //     margin-right: auto;
-        //   }
-        // }
-      }
-      &__middle{
         height: 450px;
         background-color: lightgray;
         position: relative;
+        margin-top: 50px;
         img{
           height: 90%;
           width: 90%;
@@ -53,14 +38,20 @@
           transform : translate(-50%,-50%);
         }
       }
+      &__middle{
+        display: none;
+      }
       &__bottom{
         height: 150px;
         padding: 50px 25px 0 25px;
         font-size: 13px;
       }
+      &__button{
+        display: none;
+      }
     }
     &--right{
-      width: 25%;
+      width: 30%;
       height: 200px;
       background-color: #FAFAFA;
       margin-left: auto;
@@ -107,7 +98,9 @@
       }
       &__choice{
         width: 100%;
+        height: 130px;
         text-align: center;
+        padding-top: 50px;
 
         a{
           font-size: 15px;
@@ -148,6 +141,7 @@
     margin: 0 auto;
     &--slick{
       ul.posts__other--slick__slide{
+        padding-inline-start: 0;
         display: flex;
         li{
           list-style: none;
@@ -162,17 +156,16 @@
       }
     }
     ul.other{
+      padding-inline-start: 0;
       display: flex;
       li.other__image{
         list-style: none;
-
         width: 20%;
-
         a{
           img{
             width: 90%;
             height: 130px;
-        }
+          }
         }
       }
     }
@@ -205,7 +198,6 @@
       width: 50%;
       margin: 0 auto;
       border: #e6e6e6 1px solid;
-      // border-radius: 10px;
       p{
         background-color: #e6e6e6;
         font-size: 18px;
@@ -254,6 +246,128 @@
           margin-top: 15px;
 
         }
+      }
+    }
+  }
+}
+
+//レスポンシブ
+
+//タブレット縦
+@media screen and (max-width: 1024px){
+  .posts{
+    width: 70%;
+    &__other{
+      width: 85%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 896px){
+  .posts{
+    width: 80%;
+    &__other{
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 650px){
+  .posts{
+    &__main{
+      display: block;
+      &--right{
+        display: none;
+      }
+      &--left{
+        width: 90%;
+        margin: 0 auto;
+        &__middle{
+          display: block;
+          height: 70px;
+          margin-top: 20px;
+          table{
+            margin: 0 auto;          }
+        }
+        &__button{
+          display: block;
+          width: 85%;
+          height: 70px;
+          line-height: 70px;
+          margin: 0 auto;
+          text-align: center;
+          a{
+            text-align: center;
+            font-size: 13px;
+            text-decoration: none;
+          }
+  
+          .edit-button{
+            color: white;
+            background-color:#3b47ed;
+            padding: 10px;
+          }
+          .delete-button{
+            color: white;
+            background-color:#f04c41;
+            padding: 10px;
+          }
+        }
+      }
+    }
+    &__other{
+      width: 95%;
+      ul.other, .posts__other--slick__slide{
+        padding-inline-start: 0;
+      }
+    }
+    &__comments{
+      &--top{
+        width: 70%;
+      }
+    }
+  }
+}
+
+
+//スマホたて
+@media screen and (max-width: 480px){
+  .posts{
+    width: 90%;
+    &__main{
+      &--left{
+        &__button{
+          width: 95%;
+        }
+      }
+    }
+    &__other{
+      height: 700px;
+      width: 60%;
+      text-align: center;
+      &--others, &--slick{
+        span{
+          font-size: 18px;
+        }
+      }
+      ul.other, ul.posts__other--slick__slide{
+        display: block;
+        margin-top: 30px;
+        li.other__image{
+          width: 100%;
+          a{
+            img{
+              width: 60%;
+              height: 130px;
+            }
+          }
+        }
+      }
+    }
+    &__comments{
+      &--top{
+        width: 80%;
       }
     }
   }
