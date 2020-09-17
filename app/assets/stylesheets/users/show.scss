@@ -1,28 +1,24 @@
 .myprofile{
-  margin: 30px 200px;
+  margin: 30px auto;
+  width: 60%;
   min-height: 100%;
   .myprofile-detail{
     display: flex;
     height: 200px;
     justify-content: center;
     &__icon{
-      width: 200px;
+      width: 30%;
       text-align: center;
-      // img{
-      //   border-radius: 50%;
-      // }
       i{
         font-size: 100px;
         line-height: 200px;
-
       }
     }
     &__info{
-      width: 340px;
+      width: 50%;
       padding: 30px;
-      // height: auto;
-      // overflow: hidden;
       table{
+        float: right;
         tr{
           th{
             width: 40%;
@@ -33,14 +29,12 @@
           width: 70%;
           text-align: right;
           }
-          
           td{
             font-weight: bold;
             text-align: center;
           }
           td.edit-button{
             padding-top: 5px;
-
             a{
               text-decoration: none;
               color: black;
@@ -64,4 +58,45 @@
 
 
 
+@media screen and (max-width: 894px){
+  .myprofile{
+    width: 75%;
+  }
+}
 
+@media screen and (max-width: 650px){
+  .myprofile{
+    width: 85%;
+    #name{
+      font-size: 20px;
+    }
+    tr{
+      font-size: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px){
+  .myprofile{
+    .myprofile-detail{
+      width: 80%;
+      height: 270px;
+      display: block;
+      margin: 0 auto;
+      &__icon{
+        height: 120px;
+        margin: 0 auto;
+        width: 40%;
+      }
+      &__info{
+        height: 150px;
+        padding: 0;
+        width: 100%;
+        table{
+          margin: 0 auto;
+          float: none;
+        }
+      }
+    }
+  }
+}
