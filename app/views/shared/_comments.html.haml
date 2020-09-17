@@ -18,25 +18,7 @@
     .posts__comments--bottom
       = form_for [@post, @comment] do |f|
         = f.hidden_field :post_id, value: @post.id
-        = f.text_area :content
+        = f.text_area :content, id: "text"
         %br
-        = f.submit "投稿する", class: "comment-submit"
+        = f.submit "投稿する", class: "comment-submit", id: "comment-submit"
 
-      -# -if @post.user_id != current_user.id
-      -#   .comment-form
-      -#     = form_for [@post, @comment] do |f|
-      -#       = f.hidden_field :post_id, value: @post.id
-      -#       = f.text_area :content
-      -#       %br
-      -#       = f.submit "Comment", class: "comment-submit"
-
-      -#     -if @comments.any?
-      -#       .comments
-      -#         -@comments.each do |c|
-      -#           .comments-box
-      -#             .comments-box__name
-      -#               = c.user.username unless c.user.blank?
-      -#               -# =link_to user_path(@user) do
-      -#               -#   = insert_name(@comments.user.username)
-      -#             .comments-box__comment
-      -#               = c.content

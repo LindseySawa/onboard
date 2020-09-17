@@ -1,28 +1,33 @@
 .posts__main--left__top
   =image_tag @post.image.url
 .posts__main--left__middle
+  %p
+    = @post.title
   %table
     %tr
-      %td
-        国：
-      %td
-        = @post.country
-    %tr
-      %td
-        都市：
-      %td
+      %td.question 国：
+      %td.answer
+        =@post.country
+      %td.question 都市：
+      %td.answer
         = @post.city
-    %tr
-      %td
-        撮影方法：
+      %td 撮影方法：
       %td
         = @post.how
+
 
 .posts__main--left__bottom
   = @post.discription
 
-.posts__main--left__button
-  = link_to "この投稿を編集する", edit_post_path(@post), method: :get, class: "edit-button"
-  = link_to "この投稿を削除する", post_path(@post), method: :delete, class: "delete-button"
+.posts__main--left__option
+  -if @post.user.id == current_user.id
+    .posts__main--left__option#button
+      = link_to "この投稿を編集する", edit_post_path(@post), method: :get, class: "edit-button"
+      = link_to "この投稿を削除する", post_path(@post), method: :delete, class: "delete-button"
 
-
+  -else
+    .posts__main--left__option#like-heart
+      %p この投稿が気に入ったら
+      %p ♡を押してね
+      %br/
+      = render "likes/like", locals: { post: @post, posts: @posts, likes: @likes, like: @like }

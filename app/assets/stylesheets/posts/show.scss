@@ -19,10 +19,6 @@
     display: flex;
     &--left{
       width: 60%;
-      // &__top{
-      //   height: 50px;
-      //   // display: flex;
-      // }
       &__top{
         height: 450px;
         background-color: lightgray;
@@ -46,7 +42,7 @@
         padding: 50px 25px 0 25px;
         font-size: 13px;
       }
-      &__button{
+      &__option{
         display: none;
       }
     }
@@ -93,7 +89,7 @@
         .text{
           width: 70%;
           text-align: center;
-          font-weight: 600;
+          font-weight: 400;
         }
       }
       &__choice{
@@ -171,27 +167,6 @@
     }
   }
 
-    //       &__like{
-    //         float: right;
-    //         position: absolute;
-    //         bottom: 7px;
-    //         right: 5px;
-    //         font-size: 30px;
-    //         #liked{
-    //           a{
-    //             text-decoration: none;
-    //             color: red;
-    //           }
-    //         }
-    //         #like{
-    //           a{
-    //             text-decoration: none;
-    //             color: red;
-    //           }
-    //         }
-    //       }
-    //     }
-
   &__comments{
     margin: 50px 0;
     &--top{
@@ -226,7 +201,7 @@
         padding: 10px;
         text-align: center;
         textarea{
-          width: 70%;
+          width: 60%;
           height: 100px;
           border: lightgray 1px solid;
           outline: none;
@@ -260,6 +235,11 @@
     &__other{
       width: 85%;
     }
+    &__comments{
+      &--bottom{
+        width: 70%;
+      }
+    }
   }
 }
 
@@ -287,31 +267,72 @@
           display: block;
           height: 70px;
           margin-top: 20px;
-          table{
-            margin: 0 auto;          }
-        }
-        &__button{
-          display: block;
-          width: 85%;
-          height: 70px;
-          line-height: 70px;
-          margin: 0 auto;
-          text-align: center;
-          a{
+          p{
             text-align: center;
-            font-size: 13px;
-            text-decoration: none;
+            font-size: 17px;
+            margin-bottom: 15px;
           }
-  
-          .edit-button{
-            color: white;
-            background-color:#3b47ed;
-            padding: 10px;
+          table{
+            margin: 0 auto;
+            padding: 0;
+            width: 95%;
+            td.question{
+              width: 7%;
+            }
+            td{
+              width: 13%;
+              font-size: 10px;
+
+            }
           }
-          .delete-button{
-            color: white;
-            background-color:#f04c41;
-            padding: 10px;
+        }
+        &__bottom{
+          padding-top: 30px;
+        }
+        &__option{
+          display: block;
+          margin: 0 auto;
+          width: 90%;
+
+          #button{
+            // width: 85%;
+            height: 70px;
+            line-height: 70px;
+            margin: 0 auto;
+            text-align: center;
+            a{
+              text-align: center;
+              font-size: 13px;
+              text-decoration: none;
+            }
+    
+            .edit-button{
+              color: white;
+              background-color:#3b47ed;
+              padding: 10px;
+            }
+            .delete-button{
+              color: white;
+              background-color:#f04c41;
+              padding: 10px;
+            }
+          }
+          #like-heart{
+            text-align: center;
+            font-size: 30px;
+            #liked{
+              a{
+                text-decoration: none;
+                color: red;
+              }
+            }
+            #like{
+              a{
+                text-decoration: none;
+                color: red;
+              }
+            }
+    
           }
         }
       }
@@ -326,6 +347,9 @@
       &--top{
         width: 70%;
       }
+      &--bottom{
+        width: 80%;
+      }
     }
   }
 }
@@ -337,7 +361,17 @@
     width: 90%;
     &__main{
       &--left{
-        &__button{
+        &__middle{
+          p{
+            font-size: 15px;
+          }
+          table{
+            td{
+              font-size: 5px;
+            }
+          }
+        }
+        &__option{
           width: 95%;
         }
       }
@@ -368,6 +402,12 @@
     &__comments{
       &--top{
         width: 80%;
+      }
+      &--bottom{
+        width: 90%;
+        #comment-submit{
+          width: 35%;
+        }
       }
     }
   }
