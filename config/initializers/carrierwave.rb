@@ -33,4 +33,5 @@ CarrierWave.configure do |config|
   #   region: 'ap-northeast-1'
   # }
 
+
 end
