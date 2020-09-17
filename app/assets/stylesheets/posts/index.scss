@@ -80,7 +80,7 @@
       display: none;
     }
     .ranking{
-      width: 50%;
+      width: 60%;
       margin: 0 auto;
       height: 300px;
       border-top: solid 2px lightgray;
@@ -91,9 +91,10 @@
       .ranking-order{
         display: flex;
         justify-content: space-evenly;
+        height: 250px;
         &__box{
+          width: 30%;
           .box-each{
-            width: 200px;
             height: 200px;
             &__rank{
               font-size: 20px;
@@ -101,7 +102,6 @@
                 color: yellow;
               }
             }
-            
             a{
               img{
                 width: 100%;
@@ -129,18 +129,28 @@
 
 //タブレット縦
 @media screen and (max-width: 1024px){
-  .use{
-    &__detail{
-      width: 20%!important;
+  .container{
+    .use{
+      &__detail{
+        width: 20%!important;
+      }
+    }
+    #ranking{
+      width: 75%;
     }
   }
 }
 
 //スマホ横
 @media screen and (max-width: 896px){
-  .use{
-    &__detail{
-      width: 30%!important;
+  .container{
+    .use{
+      &__detail{
+        width: 30%!important;
+      }
+    }
+    #ranking{
+      width: 85%;
     }
   }
 }
