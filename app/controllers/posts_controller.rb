@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.create(post_params)
     @post.save
-    redirect_to posts_path
+    redirect_to search_posts_path
     # logger.debug @post.errors.inspect
     
   end
