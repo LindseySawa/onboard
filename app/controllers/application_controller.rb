@@ -6,11 +6,12 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :fav_country, :fav_spot, :fav_pic, :fav_cam, :introduction, :sns_hp, :avatar])
     end
 
-    def after_signed_in_path_for(resource)
-      '/posts/all'
+    def after_sign_in_path_for(resource)
+      search_posts_path
     end
 
-    def after_signed_out_path_for(resource)
-      '/users/sign_in'
+    def after_sign_out_path_for(resource)
+      new_user_session_path
     end
+
 end
