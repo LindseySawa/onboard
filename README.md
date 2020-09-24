@@ -13,7 +13,7 @@ LindseySawa/onboard(https://github.com/LindseySawa/onboard)
 
 ある国を旅行した際、一番栄えているダウンタウンには日本からの観光客は全く見かけませんでした.  
 人気の国ではあるのに、なぜ全く見かけないんだろう？と思っていました。  
-しかし、ガイドブックやインターネットで調べた場所には団体ツアー？と思うほど多くの日本人が訪問し、他の国の方はあまり見かけませんでした。  
+しかし、ガイドブックやインターネットでよく見かけた場所には団体ツアー？と思うほど多くの日本人が訪問し、他の国の方はあまり見かけませんでした。  
 その光景を目にし、自身が得た情報を含め"情報が少ない・偏っている"思いました。  
 そこで”ローカルな情報、レアな情報を簡単に共有できる場所があったら良い・よりいい旅にできる”と思い作成にいたりました。  
 
@@ -21,7 +21,7 @@ LindseySawa/onboard(https://github.com/LindseySawa/onboard)
 
 ## デプロイ先
 
-http://18.178.109.224
+http://onboard3.com
 
   - テストアカウント
     - アドレス: 'onboard@onboard'
@@ -35,7 +35,6 @@ http://18.178.109.224
 - どこで撮影をしたなどの旅行先の情報のみならず、写真好きな人（自身も含め）な人用に何で撮影したかを写真情報に追加
 
 ## 現在準備中の機能
-- 投稿の際の写真のプレビュー
 - お問い合わせフォーム
 
 ## 今後実装したい機能
@@ -90,8 +89,11 @@ https://github.com/LindseySawa/onboard.git
 |email|string|null: false, unique: true|
 |fav_country|string|null: false|
 |fav_spot|string||
+|fav_pic|string||
+|fav_cam|string||
 |introduction|text|null: false|
 |sns_hp|text||
+|avatar|string||
 
 #### Association
 -has_many :posts, dependent: :destroy
